@@ -1,0 +1,31 @@
+
+// Media Query Mixins for all device sizes
+@mixin phone {
+    @media (min-width: $xxs-min) and (max-width: $sm-max) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: $md-min) and (max-width: $md-max) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $lg-min) and (max-width: $xl-max) {
+        @content;
+    }
+}
+
+@mixin desktop-up {
+    @media (min-width: $lg-min) {
+        @content;
+    }
+}
+
+@mixin lg-desktop-up {
+    @media (min-width: $xxl-min) {
+        @content;
+    }
+}

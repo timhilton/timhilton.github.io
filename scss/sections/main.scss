@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    font-family: Quicksand!important;
+    transition: 0.25s all linear;
+    background-image: url(https://s3.amazonaws.com/react-portfolio/wall.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.wrap {
+        content: ' ';
+        position: absolute;
+        background-color: rgba(white, 0.8);
+        background-size: cover;
+        width: 100%;
+        min-height: 100%;
+        height: auto;
+}
+
+#app {
+    width: 100%;
+
+  h1 {
+    color: #000;
+    font-size: 3em;
+  }
+}

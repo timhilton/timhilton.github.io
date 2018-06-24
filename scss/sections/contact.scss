@@ -1,0 +1,19 @@
+.contact-wrap {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    div {
+        display: flex;
+        align-items: center;
+        margin: 5px 0;
+    }
+    svg {
+        font-size: 36px;
+    }
+
+    a, a:hover, a:focus {
+        color: $black;
+        text-decoration: none;
+    }
+}

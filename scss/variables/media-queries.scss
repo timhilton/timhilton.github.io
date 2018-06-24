@@ -1,0 +1,22 @@
+//== Media queries breakpoints
+//
+// UPDATED BREAKPOINTS BASED OFF OF BOOTSTRAP BREAKS
+$xxs-min: 320px; //extra small devices (old phones)
+$xxs-max: 479px;
+
+$xs-min: 480px; //extra small devices (phones)
+$xs-max: 575px;
+
+$sm-min: 576px; // small devices (phones)
+$sm-max: 767px;
+
+$md-min: 768px; // medium devices (tablets)
+$md-max: 991px;
+
+$lg-min: 992px; // large devices (desktop)
+$lg-max: 1199px;
+
+$xl-min: 1200px; // extra large devices (desktop)
+$xl-max: 1399px;
+
+$xxl-min: 1400px; // extra large devices (wide desktop)

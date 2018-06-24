@@ -1,0 +1,125 @@
+@import "../variables/variables.scss";
+@import "../components/global.scss";
+
+.nav-wrap {
+    position: fixed;
+    width: 100vw;
+    border-bottom: 2px solid black;
+    z-index: 9000;
+    background-color: $white;
+    height: 10vh;
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.navbar {
+    @extend .side-margins;
+    height: 10vh;
+
+    @media (max-width: $md-min) {
+        padding: 0.5rem 0 !important;
+    }
+}
+
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-link {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    padding: 0 15px;
+    text-decoration: none;
+}
+
+.navbar-brand {
+    padding-bottom: 0 !important;
+}
+
+.navbar-brand,
+.nav-link,
+.navbar-brand:hover,
+.nav-link:hover,
+.navbar-brand:focus,
+.nav-link:focus {
+    text-decoration: none;
+    color: $black !important;
+}
+
+.logo span {
+    text-transform: lowercase;
+    display: inline-block;
+    letter-spacing: -1.5px;
+}
+
+.navbar-collapse {
+    @media (max-width:$md-min) {
+        background-color: $white;
+        width: 100vw;
+        margin-left: -8vw;
+        margin-right: -8vw;
+        margin-top: 1vh;
+        border-bottom: 2px solid $black;
+    }
+}
+
+.hamburger {
+	position: absolute;
+	border: none !important;
+	right: 0px;
+	top: 2px;
+	cursor: pointer;
+	width: 70px;
+    display: flex;
+    right: -5vw;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 9vh;
+
+	&:hover {
+		background-color: transparent !important;
+	}
+	&:focus {
+		outline: none;
+		background-color: transparent !important;
+	}
+
+	.bar1,
+	.bar2,
+	.bar3 {
+		width: 40px;
+		height: 5px;
+		border-radius: 5px;
+		background-color: black;
+		margin: 4px 0;
+		transition: 0.4s;
+		box-shadow: 0px 2px 2px rgba(black, 0.3);
+	}
+
+	&.change {
+		.bar1 {
+			-webkit-transform: rotate(-45deg) translate(-12px, 9px);
+			transform: rotate(-45deg) translate(-12px, 9px);
+			box-shadow: 0px 1px 2px rgba(black, 0.3);
+		}
+		.bar2 {
+			opacity: 0;
+		}
+		.bar3 {
+			-webkit-transform: rotate(45deg) translate(-9px, -6px);
+			transform: rotate(45deg) translate(-9px, -6px);
+			box-shadow: 1px 0px 2px rgba(black, 0.3);
+		}
+	}
+}

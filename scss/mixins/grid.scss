@@ -1,0 +1,29 @@
+@import "../variables/grid.scss";
+// Grid system
+@mixin grid {
+    display: grid;
+    display: -ms-grid;
+}
+
+@function ms-repeat($repeat, $stuff: 1fr){
+    $list: ();
+    @for $i from 1 through $repeat { $list: append($list, $stuff, space); }
+    @return $list;
+}
+
+@mixin grid-template-columns($times, $col-width) {
+  grid-template-columns: repeat($times, $col-width);
+  -ms-grid-columns: ms-repeat($times, $col-width);
+}
+
+@mixin grid-gap($gap) {
+    grid-gap: $gap;
+}
+
+// CREATES FIXED CONTAINER BASED ON BOOTSTRAP
+@mixin container-fixed($gutter: $grid-gutter) {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left:  floor(($gutter / 2));
+  padding-right: ceil(($gutter / 2));
+}
