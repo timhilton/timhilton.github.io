@@ -150,10 +150,26 @@ body {
   margin: 0;
   font-family: Quicksand !important;
   transition: 0.25s all linear;
-  background-image: url(https://s3.amazonaws.com/react-portfolio/wall.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed; }
+  background: url(https://s3.amazonaws.com/react-portfolio/wall.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    body:before {
+      content: "";
+      display: block;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -10;
+      background: url(https://s3.amazonaws.com/react-portfolio/wall.jpg) no-repeat center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover; } }
 
 .wrap {
   content: ' ';
@@ -288,6 +304,14 @@ h1, h2, h3, h4, h5, h6, p {
 
 .navbar-brand {
   padding-bottom: 0 !important; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    .navbar-brand {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      position: relative !important;
+      margin: 0 !important;
+      height: 100%; } }
 
 .navbar-brand,
 .nav-link,
@@ -298,18 +322,22 @@ h1, h2, h3, h4, h5, h6, p {
   text-decoration: none;
   color: #16151a !important; }
 
+.logo h1 {
+  padding: 0;
+  margin: 0; }
+
 .logo span {
   text-transform: lowercase;
   display: inline-block;
   letter-spacing: -1.5px; }
 
-@media (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .navbar-collapse {
     background-color: #e5e7e4;
     width: 100vw;
     margin-left: -8vw;
     margin-right: -8vw;
-    margin-top: 1vh;
+    margin-top: 9px;
     border-bottom: 2px solid #16151a; } }
 
 .hamburger {
@@ -456,21 +484,6 @@ h1, h2, h3, h4, h5, h6, p {
     opacity: 0; }
   to {
     opacity: 1; } }
-
-.content-wrap form {
-  display: flex;
-  align-items: center;
-  flex-direction: column; }
-  .content-wrap form div {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    width: 50%;
-    padding: 15px 0; }
-  .content-wrap form .submit-btn {
-    display: flex;
-    align-items: center;
-    flex-direction: column; }
 
 .component-wrap.portfolio {
   display: grid;
@@ -745,12 +758,41 @@ h1, h2, h3, h4, h5, h6, p {
   .contact-wrap div {
     display: flex;
     align-items: center;
-    margin: 5px 0; }
+    margin: 5px 0;
+    transform: translate3d(-50%, 0, 0); }
   .contact-wrap svg {
     font-size: 36px; }
   .contact-wrap a, .contact-wrap a:hover, .contact-wrap a:focus {
     color: #16151a;
     text-decoration: none; }
+
+.contact-1 {
+  animation: slideInLeft 1s linear forwards;
+  animation-delay: 0s; }
+
+.contact-2 {
+  animation: slideInLeft 1s linear forwards;
+  animation-delay: 0.25s; }
+
+.contact-3 {
+  animation: slideInLeft 1s linear forwards;
+  animation-delay: 0.5s; }
+
+.contact-4 {
+  animation: slideInLeft 1s linear forwards;
+  animation-delay: 0.75s; }
+
+.contact-5 {
+  animation: slideInLeft 1s linear forwards;
+  animation-delay: 1s; }
+
+.contact-6 {
+  animation: slideInLeft 1s linear forwards;
+  animation-delay: 1.25s; }
+
+.contact-7 {
+  animation: slideInLeft 1s linear forwards;
+  animation-delay: 1.5s; }
 
 .logos {
   opacity: 0;

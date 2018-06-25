@@ -44,6 +44,15 @@
 
 .navbar-brand {
     padding-bottom: 0 !important;
+
+    @include phone {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        position: relative !important;
+        margin: 0 !important;
+        height: 100%;
+    };
 }
 
 .navbar-brand,
@@ -56,19 +65,27 @@
     color: $black !important;
 }
 
-.logo span {
-    text-transform: lowercase;
-    display: inline-block;
-    letter-spacing: -1.5px;
+.logo {
+    h1 {
+        padding: 0;
+        margin: 0;
+    }
+
+    span {
+        text-transform: lowercase;
+        display: inline-block;
+        letter-spacing: -1.5px;
+    }
 }
 
+
 .navbar-collapse {
-    @media (max-width:$md-min) {
+    @include phone {
         background-color: $white;
         width: 100vw;
         margin-left: -8vw;
         margin-right: -8vw;
-        margin-top: 1vh;
+        margin-top: 9px;
         border-bottom: 2px solid $black;
     }
 }

@@ -7,6 +7,7 @@
         display: flex;
         align-items: center;
         margin: 5px 0;
+        transform: translate3d(-50%, 0, 0);
     }
     svg {
         font-size: 36px;
@@ -15,5 +16,15 @@
     a, a:hover, a:focus {
         color: $black;
         text-decoration: none;
+    }
+}
+
+$contact-slug: contact !default;
+$times: 0.25;
+
+@for $k from 1 through 7 {
+    .#{$contact-slug}-#{$k}{
+        animation: slideInLeft 1s linear forwards;
+        animation-delay: #{($times * ($k + 1)) - ($times * 2)}s;
     }
 }

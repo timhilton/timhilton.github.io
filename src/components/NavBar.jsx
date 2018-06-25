@@ -32,8 +32,8 @@ toggle() {
         const links = ['portfolio', 'skills', 'contact'];
         const navbar = links.map(link => {
             return (
-                <NavItem key={link}>
-                    <NavLink tag={Link} to={"/" + link} >
+                <NavItem key={link} onClick={this.state.active ? this.toggle : null}>
+                    <NavLink tag={Link} to={"/" + link}>
                         {link}
                     </NavLink>
                 </NavItem>

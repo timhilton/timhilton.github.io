@@ -4,26 +4,6 @@
 
 .content-wrap {
     @extend .dropdown;
-
-    form {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-
-        div {
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-            width: 50%;
-            padding: 15px 0;
-        }
-
-        .submit-btn {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-        }
-    }
 }
 
 // portfolio items
