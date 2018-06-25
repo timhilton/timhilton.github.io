@@ -43,7 +43,7 @@ toggle() {
         return (
             <div className="nav-wrap">
                 <Navbar light expand="md" fixed="true">
-        			<NavbarBrand tag={Link} to="/">
+        			<NavbarBrand tag={Link} to="/" onClick={this.state.active ? this.toggle : null}>
         				<h1 className="logo">Tim Hil<span>to</span>n</h1>
         			</NavbarBrand>
         			<NavbarToggler
