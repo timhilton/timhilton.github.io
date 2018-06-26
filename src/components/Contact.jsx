@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Heading from "../elements/Heading";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faEnvelope} from '@fortawesome/free-regular-svg-icons/faEnvelope';
+import {faEnvelope, faFilePdf} from '@fortawesome/free-regular-svg-icons';
 import {faGithub, faStrava, faLinkedin, faInstagram, faSpotify} from '@fortawesome/free-brands-svg-icons';
 
 class Contact extends Component {
@@ -17,7 +17,8 @@ class Contact extends Component {
                       <div className="contact-4"><FontAwesomeIcon icon={faStrava}/>&nbsp;&nbsp;<a target="_blank" rel="noopener noreferrer" href="https://www.strava.com/athletes/timhilton">Strava</a></div>
                       <div className="contact-5"><FontAwesomeIcon icon={faInstagram}/>&nbsp;&nbsp;<a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/tim.hilton/">Instagram</a></div>
                       <div className="contact-6"><FontAwesomeIcon icon={faSpotify}/>&nbsp;&nbsp;<a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/user/timhilton79?si=4qhi93PKQheA0Ml399zfhw">Spotify</a></div>
-                  </div>
+                      <div className="contact-7"><FontAwesomeIcon icon={faFilePdf}/>&nbsp;&nbsp;<a target="_blank" rel="noopener noreferrer" href="https://s3.amazonaws.com/www.timhilton.net/TimHiltonResume2018.pdf">Resume</a></div>
+              </div>
 
 
               </div>
