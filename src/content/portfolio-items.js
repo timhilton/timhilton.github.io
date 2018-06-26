@@ -1,19 +1,20 @@
 const items = [
+
     {
         id: "1",
-        project: "dd",
-        name: "#SummerNotSorry Webby",
-        url: "http://summernotsorry.com/",
-        role: "Full Stack Developer",
-        desc: "Node, Express, Gulp, Nunjucks, Sass, and Slick Slider"
+        project: "xyzal",
+        name: "Xyzal",
+        url: "http://xyzal.com/",
+        role: "Front End Developer",
+        desc: "Wordpress, Drupal, Laravel, PHP, JavaScript/jQuery, Sass, GoogleMaps, and Slick Slider"
     },
     {
         id: "2",
-        project: "vea",
-        name: "Vea Landing Page",
-        url: "http://www.veasnacks.com/",
+        project: "winelibraryalexa",
+        name: "Wine Library Alexa Skill",
+        url: "https://www.amazon.com/VaynerMedia-Wine-Library/dp/B0793CKCFM",
         role: "Full Stack Developer",
-        desc: "Node, Express, Gulp, Nunjucks, Sass, and Slick Slider"
+        desc: "Node, Gulp, Lodash, Alexa SDK, AWS"
     },
     {
         id:"3",
@@ -25,11 +26,11 @@ const items = [
     },
     {
         id: "4",
-        project: "vaynerx",
-        name: "VaynerX Landing Page",
-        url: "https://vaynerx.com/",
+        project: "dd",
+        name: "#SummerNotSorry Webby",
+        url: "http://summernotsorry.com/",
         role: "Full Stack Developer",
-        desc: "Node, Express, Gulp, Nunjucks, Sass, Fullpage.js"
+        desc: "Node, Express, Gulp, Nunjucks, Sass, and Slick Slider"
     },
     {
         id: "5",
@@ -49,11 +50,11 @@ const items = [
     },
     {
         id: "7",
-        project: "winelibraryalexa",
-        name: "Wine Library Alexa Skill",
-        url: "https://www.amazon.com/VaynerMedia-Wine-Library/dp/B0793CKCFM",
+        project: "vea",
+        name: "Vea Landing Page",
+        url: "http://www.veasnacks.com/",
         role: "Full Stack Developer",
-        desc: "Node, Gulp, Lodash, Alexa SDK, AWS"
+        desc: "Node, Express, Gulp, Nunjucks, Sass, and Slick Slider"
     },
     {
         id: "8",
@@ -65,19 +66,19 @@ const items = [
     },
     {
         id: "9",
+        project: "vaynerx",
+        name: "VaynerX Landing Page",
+        url: "https://vaynerx.com/",
+        role: "Full Stack Developer",
+        desc: "Node, Express, Gulp, Nunjucks, Sass, Fullpage.js"
+    },
+    {
+        id: "10",
         project: "heavensent",
         name: "Stride Gum Heaven Sent",
         url: "http://strideheavensent.tumblr.com/",
         role: "Front End Developer",
         desc: "Tumblr, CSS, HTML"
-    },
-    {
-        id: "10",
-        project: "xyzal",
-        name: "Xyzal",
-        url: "http://xyzal.com/",
-        role: "Front End Developer",
-        desc: "Wordpress, Drupal, Laravel, PHP, JavaScript/jQuery, Sass, GoogleMaps, and Slick Slider"
     },
     {
         id: "11",
