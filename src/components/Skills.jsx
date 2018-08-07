@@ -8,10 +8,10 @@ export default class Skills extends PureComponent {
                 <Heading title="Skills"/>
                 <div className="skills-list">
                     <h5>Web Development & Deployment</h5>
-                    <p>React - Redux - Ruby on Rails - Sinatra - Angular - Express - Node - Nunjucks - MySQL - SQLite3 - PostgreSQL - MongoDB - DynamoDB - AWS - ngrok - Heroku - Bootstrap - Gulp - Grunt - Sass/SCSS - D3 - Wordpress</p>
+                    <p>React - Redux - Ruby on Rails - Sinatra - Angular - Express - Node - Nunjucks - MySQL - SQLite3 - PostgreSQL - MongoDB - DynamoDB - AWS - ngrok - Heroku - Bootstrap - Gulp - Grunt - Sass/SCSS - D3 - Wordpress -iOS - xCode</p>
 
                     <h5>Languages</h5>
-                    <p>Ruby - Javascript - PHP - HTML - CSS</p>
+                    <p>Ruby - Javascript - PHP - HTML - CSS - Swift</p>
 
                     <h5>Testing</h5>
                     <p>Mocha - Chai - Jest</p>
