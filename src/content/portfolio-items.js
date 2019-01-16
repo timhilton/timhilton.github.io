@@ -26,14 +26,6 @@ const items = [
     },
     {
         id: "4",
-        project: "dd",
-        name: "#SummerNotSorry Webby",
-        url: "http://summernotsorry.com/",
-        role: "Full Stack Developer",
-        desc: "Node, Express, Gulp, Nunjucks, Sass, and Slick Slider"
-    },
-    {
-        id: "5",
         project: "voicecon",
         name: "Voicecon",
         url: "http://voicecon.co/",
@@ -41,15 +33,15 @@ const items = [
         desc: "Wordpress, Gulp, JavaScript/jQuery, Sass, GoogleMaps, and Slick Slider"
     },
     {
-        id: "6",
+        id: "5",
         project: "agent2021",
         name: "Agent 2021",
         url: "https://agent2021.com/",
-        role: "Front End Developer",
+        role: "Front End Developer on 2018 site",
         desc: "Wordpress, Gulp, JavaScript/jQuery, Sass, GoogleMaps, and Slick Slider"
     },
     {
-        id: "7",
+        id: "6",
         project: "vea",
         name: "Vea Landing Page",
         url: "http://www.veasnacks.com/",
@@ -57,15 +49,7 @@ const items = [
         desc: "Node, Express, Gulp, Nunjucks, Sass, and Slick Slider"
     },
     {
-        id: "8",
-        project: "stellacidre",
-        name: "Stella Cidre Webby Page",
-        url: "http://stellartoiscidre-webby.vaynermedia.com/",
-        role: "Full Stack Developer",
-        desc: "Node, Express, Gulp, Nunjucks, Less"
-    },
-    {
-        id: "9",
+        id: "7",
         project: "vaynerx",
         name: "VaynerX Landing Page",
         url: "https://vaynerx.com/",
@@ -73,15 +57,7 @@ const items = [
         desc: "Node, Express, Gulp, Nunjucks, Sass, Fullpage.js"
     },
     {
-        id: "10",
-        project: "heavensent",
-        name: "Stride Gum Heaven Sent",
-        url: "http://strideheavensent.tumblr.com/",
-        role: "Front End Developer",
-        desc: "Tumblr, CSS, HTML"
-    },
-    {
-        id: "11",
+        id: "8",
         project: "alexa",
         name: "Alexa Skills",
         url: "https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Dalexa-skills&field-keywords=tim+hilton",
@@ -89,7 +65,7 @@ const items = [
         desc: "Alexa SDK, Node, Javascript, AWS"
     },
     {
-        id: "12",
+        id: "9",
         project: "globeats",
         name: "GloBeats",
         url: "http://globeats.herokuapp.com/",
@@ -98,7 +74,7 @@ const items = [
         desc: "Node, Express, D3, socket.io, HTML5 audio, s3, CSS, jQuery"
     },
     {
-        id: "13",
+        id: "10",
         project: "rtr",
         name: "Road Trip Roulette",
         url: "http://road-trip-roulette.herokuapp.com/",
@@ -107,7 +83,7 @@ const items = [
         desc: "Ruby on Rails, JavaScript, jQuery, GoogleMaps, Yelp API, PostgreSQL, Backbone, Bootstrap"
     },
     {
-        id: "14",
+        id: "11",
         project: "bandemail",
         name: "Band Email App",
         url: "http://safe-thicket-4470.herokuapp.com/",
@@ -116,7 +92,7 @@ const items = [
         desc: "Sinatra, Ruby, Javascript, jQuery, Backbone, Skeleton, Sass, PostgreSQL"
     },
     {
-        id: "15",
+        id: "12",
         project: "journal",
         name: "Journal",
         url: "https://limitless-anchorage-9337.herokuapp.com/",
@@ -125,7 +101,7 @@ const items = [
         desc: "Ruby on Rails, Javascript, jQuery, Backbone, Materialize, Sass, PostgreSQL"
     },
     {
-        id: "16",
+        id: "13",
         project: "zenhaven",
         name: "ZenHaven Checkout Page",
         url: "https://www.zenhaven.com/shop-mattress/",
@@ -133,7 +109,7 @@ const items = [
         desc: "HTML and CSS on checkout page ONLY"
     },
     {
-        id: "17",
+        id: "14",
         project: "chitchatter",
         name: "Chit Chatter",
         url: "http://chitchatter.herokuapp.com/",
