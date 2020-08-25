@@ -8,7 +8,7 @@ export default class Skills extends PureComponent {
                 <Heading title="Skills"/>
                 <div className="skills-list">
                     <h5>Web Development & Deployment</h5>
-                    <p>React - Redux - Ruby on Rails - Sinatra - Express - Node - Nunjucks - MySQL - SQLite3 - PostgreSQL - MongoDB - DynamoDB - AWS - ngrok - Heroku - Bootstrap - Gulp - Grunt - Sass/SCSS - D3 - Wordpress - iOS - xCode - ReactNative</p>
+                    <p>React - Next.js - Redux - Ruby on Rails - Sinatra - Express - Node - Nunjucks - MySQL - SQLite3 - PostgreSQL - MongoDB - DynamoDB - AWS - ngrok - Heroku - Bootstrap - Gulp - Grunt - Webpack - Sass/SCSS - styled-components - D3 - Wordpress - iOS - xCode - ReactNative</p>
 
                     <h5>Languages</h5>
                     <p>Ruby - Javascript - PHP - HTML - CSS - Swift</p>
@@ -29,7 +29,7 @@ export default class Skills extends PureComponent {
                     <p>Arduino - Alexa - Google Assistant</p>
 
                     <h5>Photography</h5>
-                    <p>Nikon D3400 - Parrot MamboFly</p>
+                    <p>Nikon D3400</p>
                 </div>
           </div>
         )
