@@ -12,7 +12,6 @@ export default class PortfolioItem extends Component {
 }
 
 toggleModal() {
-    console.log('clicked');
     this.setState({
 		isModalOpen: !this.state.isModalOpen
     })
@@ -36,6 +35,7 @@ toggleModal() {
                     role={this.props.role}
                     desc={this.props.desc}
                     url={this.props.url}
+                    year={this.props.year}
                     github={this.props.github}
                 />
             </div>

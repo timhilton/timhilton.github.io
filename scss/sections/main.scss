@@ -2,7 +2,8 @@ body {
     margin: 0;
     font-family: Quicksand!important;
     transition: 0.25s all linear;
-    background: url(https://s3.amazonaws.com/react-portfolio/wall.jpg) no-repeat center center fixed;
+    // background: url(https://s3.amazonaws.com/www.timhilton.net/Wall.jpg) no-repeat center center fixed;
+    background-color: $white;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -18,7 +19,8 @@ body {
           width: 100%;
           height: 100%;
           z-index: -10;
-          background: url(https://s3.amazonaws.com/react-portfolio/wall.jpg) no-repeat center center;
+          // background: url(https://s3.amazonaws.com/www.timhilton.net/Wall.jpg) no-repeat center center;
+          background-color: $white;
           -webkit-background-size: cover;
           -moz-background-size: cover;
           -o-background-size: cover;

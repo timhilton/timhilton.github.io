@@ -17,6 +17,7 @@ export default class Portfolio extends PureComponent {
                     github={item.github ? item.github : ""}
                     role={item.role}
                     desc={item.desc}
+                    year={item.year}
                 />
             )
         });
