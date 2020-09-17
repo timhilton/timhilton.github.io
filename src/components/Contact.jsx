@@ -16,7 +16,7 @@ class Contact extends Component {
                       <div className="contact-3"><FontAwesomeIcon icon={faLinkedin}/>&nbsp;&nbsp;<a target="_blank" rel="noopener noreferrer"  href="https://www.linkedin.com/in/timhiltontech">LinkedIn</a></div>
                       <div className="contact-4"><FontAwesomeIcon icon={faInstagram}/>&nbsp;&nbsp;<a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/tim.hilton/">Instagram</a></div>
                       <div className="contact-5"><FontAwesomeIcon icon={faSpotify}/>&nbsp;&nbsp;<a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/user/timhilton79?si=4qhi93PKQheA0Ml399zfhw">Spotify</a></div>
-                      <div className="contact-6"><FontAwesomeIcon icon={faFilePdf}/>&nbsp;&nbsp;<a target="_blank" rel="noopener noreferrer" href="https://s3.amazonaws.com/www.timhilton.net/TimHiltonResume2019.pdf">Resume</a></div>
+                      <div className="contact-6"><FontAwesomeIcon icon={faFilePdf}/>&nbsp;&nbsp;<a target="_blank" rel="noopener noreferrer" href="https://s3.amazonaws.com/www.timhilton.net/TimHiltonResume2020.pdf">Resume</a></div>
               </div>
 
 
