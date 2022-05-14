@@ -1,0 +1,44 @@
+.icon {
+    &-nav {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 470px;
+        height: 460px;
+        display: grid;
+        grid-template-areas: 
+            ". . resume"
+            ". mail ."
+            "terminal . .";
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        padding-right: 71px;
+        padding-bottom: 64px;
+    }
+
+    &-resume {
+        grid-area: resume;
+    }
+
+    &-mail {
+        grid-area: mail;
+        margin-top: -21px;
+        margin-left: -22px;
+    }
+
+    &-terminal {
+        grid-area: terminal;
+    }
+
+    &-pathline {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 0;
+    }
+}
+
+.icons {
+    position: relative;
+    z-index: 3;
+}

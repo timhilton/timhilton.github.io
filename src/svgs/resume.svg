@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="130px" height="130px" viewBox="0 0 130 130" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Resume</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#CBFFB7" offset="0%"></stop>
+            <stop stop-color="#7FE462" offset="54.2687823%"></stop>
+            <stop stop-color="#2BB310" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Landing-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-823.000000, -564.000000)">
+            <g id="Group" transform="translate(823.000000, 564.000000)">
+                <circle id="Oval" fill="url(#linearGradient-1)" cx="65" cy="65" r="65"></circle>
+                <g transform="translate(35.000000, 28.000000)" stroke="#1D1F1F" stroke-width="2">
+                    <g>
+                        <path d="M4,0 L46.589808,0 C47.0708273,-2.75289708e-15 47.5357333,0.173362388 47.8993093,0.48831013 L53.9911725,5.76538652 C54.0107591,5.78235342 54.0301804,5.79951025 54.0494335,5.81685459 L59.3386319,10.5816593 C59.7596356,10.960923 60,11.5009715 60,12.0676152 L60,71 C60,73.209139 58.209139,75 56,75 L4,75 C1.790861,75 2.705415e-16,73.209139 0,71 L0,4 C-2.705415e-16,1.790861 1.790861,4.05812251e-16 4,0 Z" id="Rectangle" fill="#F6F6F6"></path>
+                        <path d="M46.668119,0 L46.668119,8.22209188 C46.668119,10.4312309 48.45898,12.2220919 50.668119,12.2220919 L60,12.2220919 L60,12.2220919" id="Line" stroke-linecap="square"></path>
+                        <line x1="8" y1="12" x2="38" y2="12" id="Line-2" stroke-linecap="square"></line>
+                        <line x1="8" y1="22" x2="52" y2="22" id="Line-2" stroke-linecap="square"></line>
+                        <line x1="8" y1="32" x2="52" y2="32" id="Line-2" stroke-linecap="square"></line>
+                        <line x1="8" y1="42" x2="52" y2="42" id="Line-2-Copy" stroke-linecap="square"></line>
+                        <line x1="8" y1="52" x2="52" y2="52" id="Line-2-Copy-2" stroke-linecap="square"></line>
+                        <line x1="8" y1="62" x2="52" y2="62" id="Line-2-Copy-3" stroke-linecap="square"></line>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

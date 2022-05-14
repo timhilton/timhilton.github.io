@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 
 //react router
-import { BrowserRouter as Router, Route } from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
 import './App.css';
 import './index.scss'
-import NavBar from "./components/NavBar.jsx";
 import Home from './components/Home.jsx';
 import Portfolio from "./components/Portfolio.jsx";
 import Skills from "./components/Skills.jsx";
@@ -16,13 +15,12 @@ class App extends Component {
         return (
             <div className="wrap">
                 <Router>
-					<div>
-		                <NavBar />
-                        <Route exact path="/" component={Home}/>
-						<Route path="/portfolio" component={Portfolio} />
-						<Route path="/skills" component={Skills} />
-						<Route path="/contact" component={Contact} />
-					</div>
+                    <Routes>
+                        <Route exact path="/" element={<Home/>}/>
+						<Route path="/portfolio" element={<Portfolio/>} />
+						<Route path="/skills" element={<Skills/>} />
+						<Route path="/contact" element={<Contact/>} />
+					</Routes>
 				</Router>
             </div>
         );

@@ -1,4 +1,13 @@
 @import "./keyframes.scss";
+* {
+    margin: 0;
+    padding: 0;
+    color: $copy;
+}
+
+body {
+    background-color: $background;
+}
 
 .side-margins {
     margin: 0 25px;

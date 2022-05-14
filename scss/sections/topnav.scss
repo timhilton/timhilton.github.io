@@ -1,0 +1,14 @@
+.topnav {
+    background-color: $background;
+    border-bottom: 1px solid $border;
+    margin-left: 42px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+
+    div {
+        width: 39px;
+        height: 28px;
+        margin-left: 8px;
+    }
+}

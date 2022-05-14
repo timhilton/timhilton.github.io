@@ -1,0 +1,41 @@
+.sidebar {
+    background-color: $background;
+    width: max-content;
+    height: 100vh;
+    min-height: 560px;
+    display: flex;  
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 42px;
+    border-right: 1px solid $border;
+
+    h2 {
+        font-family: 'SF Pro Text';
+        font-weight: 300;
+        font-style: italic;
+        font-size: 24px;
+        letter-spacing: 2.75px;
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+        justify-self: center;
+        margin-top: 48px;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-row-gap: 16px;
+        bottom: 0;
+        padding-bottom: 16px;
+    }
+
+    li {
+        svg {
+            font-size: 32px;
+        }
+    }
+}
