@@ -1,10 +1,13 @@
 .topnav {
     background-color: $background;
     border-bottom: 1px solid $border;
-    margin-left: 42px;
-    height: 38px;
     display: flex;
     align-items: center;
+    grid-area: topnav;
+
+    @include phone {
+        justify-content: center;
+    }
 
     div {
         width: 39px;

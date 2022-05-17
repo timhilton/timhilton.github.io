@@ -1,10 +1,32 @@
 .main {
     font-family: 'Galano';
-    margin-left: 42px;
+    grid-area: main;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+
+    @include tablet-up {
+        height: calc(100vh - 38px);
+        min-height: calc(900px - 38px);
+    }
+
+    @include phone {
+        height: calc(100vh - 103px);
+        min-height: auto;
+    }
 
     .content {
         margin-top: 80px;
         margin-left: 92px;
+
+        @include phone {
+            max-width: 275px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     .headings {
@@ -23,11 +45,20 @@
             position: relative;
             font-size: 36px;
 
+            @include phone {
+                font-size: 24px;
+                line-height: 1.8;
+            }
+
             &:first-of-type {
                 grid-area: top-heading;
                 align-self: end;
                 right: 50px;
                 top: 15px;
+
+                @include phone {
+                    right: 35px;
+                }
             }
 
             &:last-of-type {
@@ -42,6 +73,11 @@
         height: 140px;
         grid-area: amp;
         opacity: 0.6;
+
+        @include phone {
+            width: 78px;
+            height: 87px;
+        }
     }
 
 
@@ -51,17 +87,32 @@
         width: 535px;
         font-size: 24px;
         line-height: 40px;
+
+        @include phone {
+            font-size: 18px;
+            line-height: 36px;
+            width: 232px;
+            align-self: flex-end;
+        }
     }
 
     .icon-nav {
         .icons {
             svg {
                 width: 130px;
+
+                @include phone {
+                    width: 65px;
+                }
             }
         }
 
         svg {
             width: 424px;
+
+            @include phone {
+                width: auto;
+            }
         }
     }
 }

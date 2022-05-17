@@ -11,7 +11,7 @@ import TopNav from "./TopNav";
 export default class Home extends PureComponent {
     render(){
       return (
-          <div>
+          <div className="content-container">
             <Sidebar />
             <TopNav/>
             <main className="main">

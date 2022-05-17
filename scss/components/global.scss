@@ -7,6 +7,7 @@
 
 body {
     background-color: $background;
+    position: relative;
 }
 
 .side-margins {
@@ -62,5 +63,23 @@ body {
             width: 20px;
             margin-left: 5px;
         }
+    }
+}
+
+// new globals
+.content-container {
+    display: grid;
+    grid-template-areas: "sidebar topnav" "sidebar main";
+    grid-template-columns: 42px 1fr;
+    grid-template-rows: 38px 1fr;
+
+    @include phone {
+        grid-template-areas: 
+        "topnav"
+        "main"
+        "sidebar";
+        grid-template-columns: 1fr;
+        grid-template-rows: 38px 1fr 65px;
+        min-height: 630px;
     }
 }

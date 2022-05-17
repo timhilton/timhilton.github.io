@@ -1,15 +1,28 @@
 .sidebar {
     background-color: $background;
-    width: max-content;
     height: 100vh;
-    min-height: 560px;
     display: flex;  
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    width: 42px;
     border-right: 1px solid $border;
+    grid-area: sidebar;
+    width: 42px;
+
+    @include tablet-up {
+        min-height: 900px;
+    }
+
+    @include phone {
+        height: 65px;
+        position: relative;
+        flex-direction: row;
+        justify-content: center;
+        border-right: none;
+        border-top: 1px solid $border;
+        width: 100%;
+    }
 
     h2 {
         font-family: 'SF Pro Text';
@@ -21,6 +34,10 @@
         transform: rotate(180deg);
         justify-self: center;
         margin-top: 48px;
+
+        @include phone {
+            display: none;
+        }
     }
 
     ul {
@@ -31,11 +48,24 @@
         grid-row-gap: 16px;
         bottom: 0;
         padding-bottom: 16px;
+
+        @include phone {
+            grid-row-gap: 0;
+            grid-column-gap: 54px;
+            max-width: 275px;
+            grid-template-columns: repeat(4, 1fr);
+            padding-top: 17px;
+            padding-bottom: 20px;
+        }
     }
 
     li {
         svg {
             font-size: 32px;
+
+            @include phone {
+                font-size: 28px;
+            }
         }
     }
 }

@@ -1,6 +1,6 @@
 .icon {
     &-nav {
-        position: absolute;
+        position: relative;
         bottom: 0;
         right: 0;
         width: 470px;
@@ -12,8 +12,20 @@
             "terminal . .";
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
-        padding-right: 71px;
-        padding-bottom: 64px;
+        padding: 0 77px 64px 0;
+        align-self: flex-end;
+
+        @include phone {
+            grid-template-areas: 
+            ". terminal mail resume .";
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr repeat(3, 65px) 1fr;
+            grid-column-gap: 42px;
+            padding: 24px 0;
+            width: 100%;
+            height: auto;
+            border-top: 1px solid $border;
+        }
     }
 
     &-resume {
@@ -23,7 +35,7 @@
     &-mail {
         grid-area: mail;
         margin-top: -21px;
-        margin-left: -22px;
+        margin-left: -21px;
     }
 
     &-terminal {
@@ -35,10 +47,23 @@
         bottom: 0;
         right: 0;
         z-index: 0;
+
+        @include phone {
+            display: none;
+        }
     }
 }
 
 .icons {
     position: relative;
     z-index: 3;
+
+    @include phone {
+        margin: 0;
+
+        svg {
+            width: 65px;
+            height: 65px;
+        }
+    }
 }
