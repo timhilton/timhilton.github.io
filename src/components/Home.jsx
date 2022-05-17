@@ -31,7 +31,10 @@ export default class Home extends PureComponent {
                     <Iconpathline className="icon-pathline"/>
                     <nav className="icon-nav-container">
                         <Link to="/contact" className="icons icon-resume"><Resume/></Link>
-                        <Link to="/contact" className="icons icon-mail"><Mail/></Link>
+                        <Link to="#" onClick={(e) => {
+                            window.location.href = 'mailto:tim@timhilton.net';
+                            e.preventDefault();
+                        }} className="icons icon-mail"><Mail/></Link>
                         <Link to="/portfolio" className="icons icon-terminal"><Terminal/></Link>
                     </nav>
                 </section>

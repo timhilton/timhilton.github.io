@@ -8,7 +8,6 @@ import './index.scss'
 import Home from './components/Home.jsx';
 import Portfolio from "./components/Portfolio.jsx";
 import Skills from "./components/Skills.jsx";
-import Contact from "./components/Contact.jsx";
 
 class App extends Component {
     render() {
@@ -19,7 +18,6 @@ class App extends Component {
                         <Route exact path="/" element={<Home/>}/>
 						<Route path="/portfolio" element={<Portfolio/>} />
 						<Route path="/skills" element={<Skills/>} />
-						<Route path="/contact" element={<Contact/>} />
 					</Routes>
 				</Router>
             </div>
