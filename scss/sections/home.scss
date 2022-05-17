@@ -3,29 +3,36 @@
     grid-area: main;
     display: flex;
     justify-content: space-between;
-    flex-direction: column;
     position: relative;
+    height: calc(100vh - 38px);
+    min-height: calc(834px - 38px);
 
-    @include tablet-up {
-        height: calc(100vh - 38px);
-        min-height: calc(900px - 38px);
+    @include tablet {
+        min-height: 0;
+        flex-direction: column;
     }
 
     @include phone {
-        height: calc(100vh - 103px);
-        min-height: auto;
+        height: auto;
+        flex-direction: column;
+        min-height: calc(100vh - 128px);
     }
 
     .content {
         margin-top: 80px;
         margin-left: 92px;
 
+        @include tablet {
+            z-index: 2;
+            width: max-content;
+        }
+
         @include phone {
             max-width: 275px;
-            margin-left: auto;
-            margin-right: auto;
             display: flex;
             flex-direction: column;
+            align-content: stretch;
+            margin: 80px auto 64px;
         }
     }
 
@@ -84,7 +91,7 @@
     .copy {
         font-style: normal;
         font-weight: 100;
-        width: 535px;
+        width: 505px;
         font-size: 24px;
         line-height: 40px;
 
@@ -100,6 +107,7 @@
         .icons {
             svg {
                 width: 130px;
+                background-color: transparent;
 
                 @include phone {
                     width: 65px;

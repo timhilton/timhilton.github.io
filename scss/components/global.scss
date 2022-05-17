@@ -3,11 +3,7 @@
     margin: 0;
     padding: 0;
     color: $copy;
-}
-
-body {
     background-color: $background;
-    position: relative;
 }
 
 .side-margins {
@@ -74,12 +70,7 @@ body {
     grid-template-rows: 38px 1fr;
 
     @include phone {
-        grid-template-areas: 
-        "topnav"
-        "main"
-        "sidebar";
-        grid-template-columns: 1fr;
-        grid-template-rows: 38px 1fr 65px;
-        min-height: 630px;
+        display: flex;
+        flex-direction: column;
     }
 }

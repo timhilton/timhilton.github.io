@@ -3,6 +3,23 @@
         position: relative;
         bottom: 0;
         right: 0;
+        align-self: flex-end;
+
+        @include tablet {
+            position: absolute;
+        }
+
+        @include phone {
+            width: 100%;
+            max-width: 100%;
+            border-top: 1px solid $border;
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &-nav-container {
         width: 470px;
         height: 460px;
         display: grid;
@@ -13,18 +30,17 @@
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
         padding: 0 77px 64px 0;
-        align-self: flex-end;
 
         @include phone {
             grid-template-areas: 
-            ". terminal mail resume .";
+            "terminal mail resume";
             grid-template-rows: 1fr;
-            grid-template-columns: 1fr repeat(3, 65px) 1fr;
-            grid-column-gap: 42px;
-            padding: 24px 0;
-            width: 100%;
+            grid-template-columns: repeat(3, 65px);
+            grid-column-gap: 0;
+            justify-content: space-between;
+            max-width: 275px;
             height: auto;
-            border-top: 1px solid $border;
+            padding: 24px 0;
         }
     }
 

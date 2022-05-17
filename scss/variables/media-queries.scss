@@ -2,21 +2,13 @@
 //
 // UPDATED BREAKPOINTS BASED OFF OF BOOTSTRAP BREAKS
 $xxs-min: 320px; //extra small devices (old phones)
-$xxs-max: 479px;
+$xxs-max: 428px;
 
-$xs-min: 480px; //extra small devices (phones)
-$xs-max: 575px;
-
-$sm-min: 576px; // small devices (phones)
+$sm-min: 429px; // small devices (phones)
 $sm-max: 767px;
 
 $md-min: 768px; // medium devices (tablets)
-$md-max: 991px;
+$md-max: 1024px;
 
-$lg-min: 992px; // large devices (desktop)
-$lg-max: 1199px;
+$lg-min: 1025px; // large devices (desktop)
 
-$xl-min: 1200px; // extra large devices (desktop)
-$xl-max: 1399px;
-
-$xxl-min: 1400px; // extra large devices (wide desktop)

@@ -1,23 +1,9 @@
+:root {
+  --app-height: 100%;
+}
+
 body {
     margin: 0;
     transition: 0.25s all linear;
-
-
-    @include phone {
-        &:before {
-          content: "";
-          display: block;
-          position: fixed;
-          left: 0;
-          top: 0;
-          z-index: -10;
-        }
-        min-height: 575px;
-    }
-}
-
-.wrap {
-        background-color: $background;
-        background-size: cover;
-        width: 100%;
+    background-color: $background;
 }

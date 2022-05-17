@@ -29,9 +29,11 @@ export default class Home extends PureComponent {
                 </section>
                 <section className="icon-nav">
                     <Iconpathline className="icon-pathline"/>
-                    <Link to="/contact" className="icons icon-resume"><Resume/></Link>
-                    <Link to="/contact" className="icons icon-mail"><Mail/></Link>
-                    <Link to="/portfolio" className="icons icon-terminal"><Terminal/></Link>
+                    <nav className="icon-nav-container">
+                        <Link to="/contact" className="icons icon-resume"><Resume/></Link>
+                        <Link to="/contact" className="icons icon-mail"><Mail/></Link>
+                        <Link to="/portfolio" className="icons icon-terminal"><Terminal/></Link>
+                    </nav>
                 </section>
             </main>
           </div>

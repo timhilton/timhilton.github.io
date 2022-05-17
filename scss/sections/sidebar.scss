@@ -9,9 +9,10 @@
     border-right: 1px solid $border;
     grid-area: sidebar;
     width: 42px;
+    min-height: 834px;
 
-    @include tablet-up {
-        min-height: 900px;
+    @include tablet {
+        min-height: 768px;
     }
 
     @include phone {
@@ -22,6 +23,10 @@
         border-right: none;
         border-top: 1px solid $border;
         width: 100%;
+        min-height: 0;
+        z-index: 2;
+        order: 1;
+        margin-bottom: 80px;
     }
 
     h2 {
@@ -56,6 +61,7 @@
             grid-template-columns: repeat(4, 1fr);
             padding-top: 17px;
             padding-bottom: 20px;
+            margin-top: 7px;
         }
     }
 
