@@ -18,3 +18,25 @@
     from { opacity: 0; }
     to { opacity: 1; }
 }
+
+@keyframes pulse {
+  0% {
+    box-shadow: 
+      0 0 5px 0 rgba(47, 108, 252, 0),
+      0 0 5px 0px rgba(93, 193, 249, 0.4),
+      0 0 5px 0px rgba(47, 108, 252, 0.4)
+  }
+
+  50% {
+      box-shadow: 0 0 5px 10px rgba(93, 193, 249, 0.4),
+      0 0 5px 15px rgba(47, 108, 252, 0.4),
+      0 0 5px 0 rgba(47, 108, 252, 0),
+  }
+
+  100% {
+    box-shadow: 
+      0 0 5px 0 rgba(47, 108, 252, 0),
+      0 0 5px 10px rgba(93, 193, 249, 0.4),
+      0 0 5px 15px rgba(47, 108, 252, 0.4)
+  }
+}
