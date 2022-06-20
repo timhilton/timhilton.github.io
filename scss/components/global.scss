@@ -6,10 +6,6 @@
     background-color: $background;
 }
 
-.side-margins {
-    margin: 0 25px;
-}
-
 .hidden {
     display: none;
 }
@@ -22,14 +18,6 @@
     }
 }
 
-.slideInLeft {
-  animation-name: slideInLeft;
-  position: relative;
-  z-index: 8999;
-  animation-duration: 1s;
-  animation-fill-mode: both;
-}
-
 // components - global
 .dropdown {
     background-color: rgba($white, 0.7);
@@ -39,37 +27,36 @@
 }
 
 .component-wrap {
-    @extend .side-margins;
+    margin-inline-start: 48px;
     padding: 0.5rem 1rem;
-    padding-top: 13vh;
 
     @include phone {
         padding: 0.5rem 0;
-        padding-top: 13vh;
     }
 
     .component-heading {
-        @extend .slideInLeft;
         display: flex;
         align-items: center;
         justify-content: flex-start;
         flex-direction: row;
-
-        svg {
-            width: 20px;
-            margin-left: 5px;
-        }
     }
 }
 
 // new globals
 .content-container {
+    position: relative;
     display: grid;
     grid-template-areas: "sidebar topnav" "sidebar main";
     grid-template-columns: 42px 1fr;
     grid-template-rows: 38px 1fr;
+    min-height: 834px;
+
+    @include tablet {
+        min-height: 768px;
+    }
 
     @include phone {
+        min-height: 0;
         display: flex;
         flex-direction: column;
     }

@@ -1,32 +1,12 @@
 import React, { PureComponent } from "react";
 import Heading from "../elements/Heading";
-import PortfolioItem from "../elements/PortfolioItem";
-import items from "../content/portfolio-items.js";
 
 export default class Portfolio extends PureComponent {
     render(){
-
-        const portItems = items.map(item => {
-            return (
-                <PortfolioItem
-                    key={item.id}
-                    class={item.id}
-                    project={item.project}
-                    name={item.name}
-                    url={item.url}
-                    github={item.github ? item.github : ""}
-                    role={item.role}
-                    desc={item.desc}
-                    year={item.year}
-                />
-            )
-        });
-
         return (
             <div className="component-wrap portfolio">
                 <Heading title="Portfolio"/>
-                <p className="visible-xs slideInLeft">Tap For Details</p>
-                {portItems}
+                <p>With almost a decade of work, most of it NDAed I have to rethink what I display here. To get a better idea of my work, please see my <a href="https://s3.amazonaws.com/www.timhilton.net/TimHiltonResume2021.pdf">Resume</a>.</p>
             </div>
         )
     }

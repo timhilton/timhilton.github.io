@@ -4,6 +4,9 @@
     display: flex;
     align-items: center;
     grid-area: topnav;
+    margin-left: 42px;
+    position: fixed;
+    width: calc(100% - 42px);
 
     @include phone {
         justify-content: center;
@@ -12,6 +15,7 @@
         width: 100%;
         height: 38px;
         top: 0;
+        margin-left: 0;
     }
 
     div {

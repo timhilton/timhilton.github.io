@@ -102,25 +102,4 @@
             align-self: flex-end;
         }
     }
-
-    .icon-nav {
-        .icons {
-            svg {
-                width: 130px;
-                background-color: transparent;
-
-                @include phone {
-                    width: 65px;
-                }
-            }
-        }
-
-        svg {
-            width: 424px;
-
-            @include phone {
-                width: auto;
-            }
-        }
-    }
 }

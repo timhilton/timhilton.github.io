@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    position: absolute;
+    position: fixed;
     border-right: 1px solid $border;
     grid-area: sidebar;
     width: 42px;

@@ -13,10 +13,7 @@ export default class IconNav extends PureComponent {
             <section className="icon-nav">
                 <Iconpathline className="icon-pathline"/>
                 <nav className="icon-nav-container">
-                    <Link to="#" 
-                    onClick={(e) => {
-                        window.location.href = 'https://s3.amazonaws.com/www.timhilton.net/TimHiltonResume2021.pdf'
-                    }} className="icons icon-resume"><Resume/></Link>
+                    <a href='https://s3.amazonaws.com/www.timhilton.net/TimHiltonResume2021.pdf' target="_blank" rel="noopener noreferrer" className="icons icon-resume"><Resume/></a>
                     <Link to="#" onClick={(e) => {
                         window.location.href = 'mailto:tim@timhilton.net';
                         e.preventDefault();

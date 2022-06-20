@@ -7,18 +7,26 @@ import './App.css';
 import './index.scss'
 import Home from './components/Home.jsx';
 import Portfolio from "./components/Portfolio.jsx";
-import Skills from "./components/Skills.jsx";
+import Sidebar from './components/Sidebar';
+import TopNav from "./components/TopNav";
+import IconNav from './components/IconNav';
 
 class App extends Component {
     render() {
         return (
             <div>
                 <Router>
-                    <Routes>
-                        <Route exact path="/" element={<Home/>}/>
-						<Route path="/portfolio" element={<Portfolio/>} />
-						<Route path="/skills" element={<Skills/>} />
-					</Routes>
+                <div className="content-container">
+                <Sidebar />
+                <TopNav/>
+                    <main className="main">
+                        <Routes>
+                            <Route exact path="/" element={<Home/>}/>
+                            <Route path="/portfolio" element={<Portfolio/>} />
+                        </Routes>
+                    </main>
+                <IconNav />
+                </div>
 				</Router>
             </div>
         );
