@@ -5,8 +5,7 @@ import LinkedIn from "../svgs/linkedin.svg";
 import Instagram from "../svgs/instagram.svg";
 import Spotify from "../svgs/spotify.svg";
 import ListItem from "./DockItems";
-import Link from "next/link";
-import { useEffect } from "react";
+import Resume from '../svgs/resume.svg';
 
 const dockSlideIn = keyframes`
     0% {
@@ -47,7 +46,10 @@ const List = styled.ul`
 
     @media (max-width: 734px) {
         padding: 0 10px;
-        height: 66px;
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 230px;
     }
 `
 
@@ -62,6 +64,15 @@ const Dock = () => {
                         href="https://github.com/timhilton"
                     >
                         <GitHub />
+                    </a>
+                </ListItem>
+                <ListItem>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://s3.amazonaws.com/www.timhilton.net/THiltonResume2022.pdf"
+                    >
+                        <Resume />
                     </a>
                 </ListItem>
                 <ListItem>

@@ -13,15 +13,23 @@ const ListItem = styled.li`
             width: 50px;
         }
 
-        padding: 0 10px;
+        padding: 10px 10px 0px 10px;
     }
 
     &:first-of-type {
         padding-left: 0;
+
+        @media (max-width: 734px) {
+            padding-left: 10px;
+        }
     }
 
     &:last-of-type {
         padding-right: 0;
+
+        @media (max-width: 734px) {
+            padding-right: 10px;
+        }
     }
 
     &:hover,
@@ -32,7 +40,7 @@ const ListItem = styled.li`
 
         @media (max-width: 734px) {
             svg {
-                width: calc(50px * 1.1);
+                width: 50px;
             }
         }
 
