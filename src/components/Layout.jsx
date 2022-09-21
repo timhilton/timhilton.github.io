@@ -9,6 +9,7 @@ const Container = styled.div`
   grid-template-rows: 1fr;
   position: relative;
   height: 100vh;
+  overflow: hidden;
 `
 
 const Main = styled.main`
