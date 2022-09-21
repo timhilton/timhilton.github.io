@@ -3,7 +3,7 @@ import styled from "styled-components";
 const ListItem = styled.li`
     svg {
         width: 80px;
-        transition: width 500ms;
+        transition: width 150ms ease-in-out;
     }
     padding: 0 12.5px;
     position: relative;

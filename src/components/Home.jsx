@@ -1,5 +1,20 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import Ampersand from "../svgs/ampersand.svg";
+
+const fadeIn = keyframes`
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+`
+
+const Section = styled.section`
+    opacity: 0;
+    animation: ${fadeIn} 1000ms forwards ease-in-out;
+    animation-delay: 3000ms;
+`
 
 const Headings = styled.div`
     font-weight: normal;
@@ -72,7 +87,7 @@ const Copy = styled.p`
 
 const Home = () => {
     return (
-        <section>
+        <Section>
             <h1>Tim Hilton</h1>
             <Headings>
                     <Amp/>
@@ -82,7 +97,7 @@ const Home = () => {
             <Copy>
             I create award winning web experiences primarily focusing on front end development, UX, accessibility, and design.
             </Copy>
-        </section>
+        </Section>
     )
 }
 

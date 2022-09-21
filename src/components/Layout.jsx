@@ -1,12 +1,37 @@
-import styled, { ThemeProvider } from 'styled-components';
+import styled, { css, keyframes, ThemeProvider } from 'styled-components';
 import Dock from "./Dock";
 import Desktop from '../svgs/desktop.svg';
+import { createRef, useEffect, useRef } from 'react';
+
+const mountainFadeIn = keyframes`
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+`
+
+const createFade= () => {
+    let styles = '';
+    let j = 2500;
+
+    for (let i = 2; i <= 5; i++) {
+        styles += `
+            &:nth-of-type(${i}) {
+                animation-delay: ${j}ms;
+            }
+        `
+        j = j - 600;
+    }
+
+    return styles;
+}
 
 const Container = styled.div`
-  display: grid;
-  grid-template-areas: "main" "dock";
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
+  display: flex;
   position: relative;
   height: 100vh;
   overflow: hidden;
@@ -29,13 +54,27 @@ const Main = styled.main`
 `
 
 const Bg = styled(Desktop)`
-    grid-row-start: main;
-    grid-row-end: dock;
     position: absolute;
     z-index: 1;
     min-width: 1440px;
     width: 100%;
     justify-self: center;
+
+    path {
+        opacity: 0;
+        transform: translateY(100px);
+        transition: all 250px ease-in-out;
+        animation: ${mountainFadeIn} 1000ms forwards ease-in-out;
+        ${createFade()}
+    }
+
+    path:first-of-type {
+        opacity: 1;
+        transform: translateY(0);
+        animation: none;
+    }
+
+
 `
 
 export default function Layout({ children }) {
@@ -44,12 +83,13 @@ export default function Layout({ children }) {
         border: '151, 151, 151',
         dockColor: '246, 246, 246'
     }
+
     return (
         <>
         <ThemeProvider theme={theme}>
             <Container>
                 <Main id="main">{children}</Main>
-                <Bg/>
+                <Bg />
                 <Dock />
             </Container>
         </ThemeProvider>
