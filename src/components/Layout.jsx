@@ -24,7 +24,7 @@ const createFade= () => {
                 animation-delay: ${j}ms;
             }
         `
-        j = j - 600;
+        j = j - 750;
     }
 
     return styles;
@@ -35,6 +35,10 @@ const Container = styled.div`
   position: relative;
   height: 100vh;
   overflow: hidden;
+
+  @media (max-width: 734px) {
+    height: fill-available;
+  }
 `
 
 const Main = styled.main`
@@ -56,7 +60,7 @@ const Main = styled.main`
 const Bg = styled(Desktop)`
     position: absolute;
     z-index: 1;
-    min-width: 1440px;
+    min-width: 1680px;
     width: 100%;
     justify-self: center;
 

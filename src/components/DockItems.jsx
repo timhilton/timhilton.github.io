@@ -54,26 +54,17 @@ const ListItem = styled.li`
         transition: opacity 500ms;
 
         @media (max-width: 734px) {
-            font-size: 1.5em;
-            bottom: -20px;
+            content: none;
         }
     }
 
     &:first-of-type:after,
     &:last-of-type:after {
         width: calc(100% - 12.5px);
-
-        @media (max-width: 734px) {
-            width: calc(100% - 10px);
-        }
     }
 
     &:last-of-type:after {
         padding-left: 12.5px;
-
-        @media (max-width: 734px) {
-            padding-left: 10px;
-        }
     }
 `
 export default ListItem;

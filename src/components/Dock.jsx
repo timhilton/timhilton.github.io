@@ -46,8 +46,8 @@ const List = styled.ul`
     overflow: visible;
 
     @media (max-width: 734px) {
-        padding: 0 10px 10px 10px;
-        height: 78px;
+        padding: 0 10px;
+        height: 66px;
     }
 `
 
