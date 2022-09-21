@@ -1,7 +1,8 @@
 import styled, { css, keyframes, ThemeProvider } from 'styled-components';
 import Dock from "./Dock";
 import Desktop from '../svgs/desktop.svg';
-import { createRef, useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
+import { useWindowSize } from 'react-use';
 
 const mountainFadeIn = keyframes`
     0% {
@@ -28,6 +29,23 @@ const createFade= () => {
     }
 
     return styles;
+}
+
+
+function use100vh() {
+    const ref = useRef();
+    const { height } = useWindowSize();
+
+    useEffect(
+        () => {
+        if (!ref.current) {
+            return;
+        }
+        ref.current.style.height = height + 'px';
+        },
+        [height],
+    );
+    return ref;
 }
 
 const Container = styled.div`
@@ -83,11 +101,12 @@ export default function Layout({ children }) {
         border: '151, 151, 151',
         dockColor: '246, 246, 246'
     }
+    const ref = use100vh();
 
     return (
         <>
         <ThemeProvider theme={theme}>
-            <Container>
+            <Container  ref={ref}>
                 <Main id="main">{children}</Main>
                 <Bg />
                 <Dock />
