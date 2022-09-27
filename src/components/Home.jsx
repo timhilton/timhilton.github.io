@@ -14,6 +14,7 @@ const Section = styled.section`
     opacity: 0;
     animation: ${fadeIn} 1000ms forwards ease-in-out;
     animation-delay: 3000ms;
+    color: rgb(${(props) => props.theme.text});
 `
 
 const Headings = styled.div`
@@ -26,6 +27,7 @@ const Headings = styled.div`
     ;
     width: max-content;
     margin-bottom: 36px;
+    color: rgb(${(props) => props.theme.text});
 
     h3 {
         height: max-content;
@@ -76,6 +78,7 @@ const Copy = styled.p`
     width: 505px;
     font-size: 24px;
     line-height: 40px;
+    color: rgb(${(props) => props.theme.text});
 
     @media (max-width: 734px) {
         font-size: 18px;
