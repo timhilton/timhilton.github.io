@@ -9,7 +9,7 @@ import Resume from '../svgs/resume.svg';
 
 const dockSlideIn = keyframes`
     0% {
-        bottom: -150px;
+        bottom: -175px;
     }
     100% {
         bottom: 24px;
@@ -17,19 +17,17 @@ const dockSlideIn = keyframes`
 `
 
 const DockContainer = styled.nav`
-    bottom: -150px;
+    bottom: -175px;
     z-index: 5;
     position: fixed;
     overflow: visibile;
     width: 100%;
-    animation: ${dockSlideIn} 750ms forwards ease-in-out;
+    animation: ${dockSlideIn} 1500ms forwards ease-in-out;
     animation-delay: 3000ms;
 `
 
 const List = styled.ul`
-    background-color: rgba(${(props) => props.theme.dockColor}, 0.2);
-    border: rgba(${(props) => props.theme.border}, 0.5); 
-    color: rgb(${(props) => props.theme.color});
+    color: rgb(${(props) => props.theme.dockColor});
     border-radius: 20px;
     list-style: none;
     margin: 0 auto;

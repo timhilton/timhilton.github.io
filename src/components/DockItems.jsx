@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const ListItem = styled.li`
     svg {
-        width: 80px;
+        width: 60px;
         transition: width 150ms ease-in-out;
     }
     padding: 0 12.5px;
@@ -35,7 +35,7 @@ const ListItem = styled.li`
     &:hover,
     &:focus {
         svg {
-            width: calc(80px * 1.05);
+            width: calc(60px * 1.1);
         }
 
         @media (max-width: 734px) {

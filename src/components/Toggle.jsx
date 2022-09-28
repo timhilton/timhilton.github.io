@@ -72,7 +72,7 @@ const Check = styled.div `
 `
 
 const Toggle = (props) => {
-    const [isChecked, setIsChecked] = useState(false);
+    const [isChecked, setIsChecked] = useState(true);
     const { themePicker } = props;
 
     const handleChange = () => {

@@ -1,28 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg viewBox="0 0 130 130" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>Resume</title>
+<svg viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Resume Gradient 2</title>
     <defs>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
-            <stop stop-color="#CBFFB7" offset="0%"></stop>
-            <stop stop-color="#7FE462" offset="54.2687823%"></stop>
-            <stop stop-color="#2BB310" offset="100%"></stop>
+            <stop stop-color="#29E0CA" offset="0%"></stop>
+            <stop stop-color="#42EBAB" offset="100%"></stop>
         </linearGradient>
+        <rect id="path-2" x="0" y="0" width="512" height="512" rx="116"></rect>
+        <filter x="-59.5%" y="-47.9%" width="219.0%" height="195.8%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="12" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="30" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.0926566746   0 0 0 0 0.551630435   0 0 0 0 0.21010822  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
     </defs>
-    <g id="Landing-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Desktop" transform="translate(-823.000000, -564.000000)">
-            <g id="Group" transform="translate(823.000000, 564.000000)">
-                <circle id="Oval" fill="url(#linearGradient-1)" cx="65" cy="65" r="65"></circle>
-                <g transform="translate(35.000000, 28.000000)" stroke="#1D1F1F" stroke-width="2">
-                    <g>
-                        <path d="M4,0 L46.589808,0 C47.0708273,-2.75289708e-15 47.5357333,0.173362388 47.8993093,0.48831013 L53.9911725,5.76538652 C54.0107591,5.78235342 54.0301804,5.79951025 54.0494335,5.81685459 L59.3386319,10.5816593 C59.7596356,10.960923 60,11.5009715 60,12.0676152 L60,71 C60,73.209139 58.209139,75 56,75 L4,75 C1.790861,75 2.705415e-16,73.209139 0,71 L0,4 C-2.705415e-16,1.790861 1.790861,4.05812251e-16 4,0 Z" id="Rectangle" fill="#F6F6F6"></path>
-                        <path d="M46.668119,0 L46.668119,8.22209188 C46.668119,10.4312309 48.45898,12.2220919 50.668119,12.2220919 L60,12.2220919 L60,12.2220919" id="Line" stroke-linecap="square"></path>
-                        <line x1="8" y1="12" x2="38" y2="12" id="Line-2" stroke-linecap="square"></line>
-                        <line x1="8" y1="22" x2="52" y2="22" id="Line-2" stroke-linecap="square"></line>
-                        <line x1="8" y1="32" x2="52" y2="32" id="Line-2" stroke-linecap="square"></line>
-                        <line x1="8" y1="42" x2="52" y2="42" id="Line-2-Copy" stroke-linecap="square"></line>
-                        <line x1="8" y1="52" x2="52" y2="52" id="Line-2-Copy-2" stroke-linecap="square"></line>
-                        <line x1="8" y1="62" x2="52" y2="62" id="Line-2-Copy-3" stroke-linecap="square"></line>
-                    </g>
+    <g id="Resume-Gradient-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Bitmap">
+            <mask id="mask-3" fill="white">
+                <use xlink:href="#path-2"></use>
+            </mask>
+            <use id="Mask" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+            <g id="􀉆" filter="url(#filter-4)" mask="url(#mask-3)" fill="#FFFFFF" fill-rule="nonzero">
+                <g transform="translate(141.000000, 113.000000)" id="Shape">
+                    <path d="M0,241.810086 C0,271.774648 16.2256063,288 45.928934,288 L186.071066,288 C215.774394,288 232,271.774648 232,241.810086 L232,46.1899137 C232,16.3562017 215.774394,0 186.071066,0 L45.928934,0 C16.2256063,0 0,16.3562017 0,46.1899137 L0,241.810086 Z M33.7597293,238.146297 L33.7597293,49.9845525 C33.7597293,39.3857338 38.8629442,33.7592004 49.9853356,33.7592004 L182.014664,33.7592004 C193.137056,33.7592004 198.240271,39.3857338 198.240271,49.9845525 L198.240271,238.146297 C198.240271,248.614266 193.137056,254.2408 182.014664,254.2408 L49.9853356,254.2408 C38.8629442,254.2408 33.7597293,248.614266 33.7597293,238.146297 Z M71.1833051,86.0990459 L160.947547,86.0990459 C165.91991,86.0990459 169.583756,82.1735575 169.583756,77.2012721 C169.583756,72.3598364 165.91991,68.6960473 160.947547,68.6960473 L71.1833051,68.6960473 C66.0800902,68.6960473 62.4162437,72.3598364 62.4162437,77.2012721 C62.4162437,82.1735575 66.0800902,86.0990459 71.1833051,86.0990459 Z M71.1833051,129.148569 L160.947547,129.148569 C165.91991,129.148569 169.583756,125.22308 169.583756,120.250795 C169.583756,115.540209 165.91991,111.74557 160.947547,111.74557 L71.1833051,111.74557 C66.0800902,111.74557 62.4162437,115.540209 62.4162437,120.250795 C62.4162437,125.22308 66.0800902,129.148569 71.1833051,129.148569 Z M71.1833051,172.198092 L116.327129,172.198092 C121.299492,172.198092 125.094191,168.534303 125.094191,163.692867 C125.094191,158.720582 121.299492,154.795093 116.327129,154.795093 L71.1833051,154.795093 C66.0800902,154.795093 62.4162437,158.720582 62.4162437,163.692867 C62.4162437,168.534303 66.0800902,172.198092 71.1833051,172.198092 Z"></path>
                 </g>
             </g>
         </g>

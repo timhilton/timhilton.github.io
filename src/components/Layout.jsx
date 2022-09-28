@@ -139,10 +139,10 @@ export default function Layout({ children }) {
         light: lightMode,
         dark: darkMode
     }
-    
+
     const ref = use100vh();
 
-    const [selectedTheme, setSelectedTheme] = useState('light');
+    const [selectedTheme, setSelectedTheme] = useState('dark');
 
     return (
         <>
