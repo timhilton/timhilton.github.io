@@ -45,7 +45,7 @@ const Label = styled.label`
     text-indent: -9999px;
     width: 50px;
     height: 25px;
-    background: ${(props) => props.theme.colors.start1};
+    background: transparent;
     display: block;
     border-radius: 100px;
     position: absolute;

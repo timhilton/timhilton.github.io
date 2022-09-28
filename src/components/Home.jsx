@@ -97,9 +97,9 @@ const Home = () => {
                     <h3>Web Development</h3>
                     <h3>Creative Services</h3>
             </Headings>
-            <Copy>
+            {/* <Copy>
             I create award winning web experiences primarily focusing on front end development, UX, accessibility, and design.
-            </Copy>
+            </Copy> */}
         </Section>
     )
 }
