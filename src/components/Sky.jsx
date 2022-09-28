@@ -1,6 +1,6 @@
 import { Canvas, extend, useFrame, useThree } from "@react-three/fiber";
 import { useRef, Suspense } from "react";
-import { Stars } from "@react-three/drei";
+import { Stars, Cloud } from "@react-three/drei";
 
 import { TrackballControls } from "three/examples/jsm/controls/TrackballControls";
 import styled from "styled-components";
@@ -30,7 +30,18 @@ const Sky = (props) => {
     const {selectedTheme} = props;
 
     if (selectedTheme === 'light') {
-        return 
+        return (
+        <Parent>
+            <Canvas camera={{ position: [0, 0, 18], fov: 25 }}>
+                <ambientLight />
+                <pointLight position={[10, 10, 10]} />
+                <TrackControls/>
+                <Suspense fallback={null}>
+                    <Cloud segments={10} speed={0.3} depth={2.5} opacity={0.9}/>
+                </Suspense>
+            </Canvas>
+        </Parent>
+        )
     } else {
         return (
             <Parent>
@@ -40,6 +51,7 @@ const Sky = (props) => {
                     <TrackControls/>
                     <Suspense fallback={null}>
                         <Stars radius={1} depth={25} count={10000} factor={4} saturation={0} fade speed={1} />
+                        <Cloud segments={6} speed={0.4} opacity={0.6} color={'#292F53'} depth={2.5}/>
                     </Suspense>
                 </Canvas>
             </Parent>
