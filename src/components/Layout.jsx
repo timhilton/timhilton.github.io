@@ -4,6 +4,7 @@ import Desktop from './Desktop';
 import Toggle from './Toggle';
 import { useEffect, useRef, useState } from 'react';
 import { useWindowSize } from 'react-use';
+import Sky from './Sky';
 
 const mountainFadeIn = keyframes`
     0% {
@@ -20,7 +21,7 @@ const createFade= () => {
     let styles = '';
     let j = 2500;
 
-    for (let i = 2; i <= 5; i++) {
+    for (let i = 1; i <= 5; i++) {
         styles += `
             &:nth-of-type(${i}) {
                 animation-delay: ${j}ms;
@@ -54,6 +55,7 @@ const Container = styled.div`
   position: relative;
   height: 100vh;
   overflow: hidden;
+  background: linear-gradient(0deg, ${(props) => props.theme.colors.stop1} 33.892%, ${(props) => props.theme.colors.start1} )
 `
 
 const Main = styled.main`
@@ -61,6 +63,7 @@ const Main = styled.main`
     margin: 0 auto;
     position: relative;
     z-index: 2;
+    pointer-events: none;
 
     @media (min-width: 735px) and (max-width: 1024px) {
         width: 692px;
@@ -78,6 +81,7 @@ const Bg = styled(Desktop)`
     min-width: 1680px;
     width: 100%;
     justify-self: center;
+    pointer-events: none;
 
     path {
         opacity: 0;
@@ -85,12 +89,6 @@ const Bg = styled(Desktop)`
         transition: all 250ms ease-in-out;
         animation: ${mountainFadeIn} 1000ms forwards ease-in-out;
         ${createFade()}
-    }
-
-    path:first-of-type {
-        opacity: 1;
-        transform: translateY(0);
-        animation: none;
     }
 `
 
@@ -148,6 +146,7 @@ export default function Layout({ children }) {
         <>
         <ThemeProvider theme={selectedTheme === 'light' ? theme.light : theme.dark}>
             <Container  ref={ref}>
+                <Sky selectedTheme={selectedTheme}/>
                 <Main id="main">{children}</Main>
                 <Toggle themePicker={setSelectedTheme}/>
                 <Bg />
