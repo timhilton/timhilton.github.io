@@ -52,6 +52,14 @@ export default class MyDocument extends Document {
             type="font/otf"
             crossOrigin=""
           />
+          <meta property="og:url" content="https://www.timhilton.net" />
+          <meta property="og:title" content="Tim Hilton - Web Development and Creative Services" />
+          <meta property="og:description" content="I create award winning web experiences primarily focusing on front end development, UX, accessibility, and design." />
+          <meta property="og:image" content="https://s3.amazonaws.com/www.timhilton.net/og-image.jpg?versionId=VPFLQJfTqq8vzuOh_2aS9v4n8WBxemWN" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:image" content="https://s3.amazonaws.com/www.timhilton.net/twittercard.jpg" />
+          <meta name="twitter:name" content="Tim Hilton - Web Development and Creative Services" />
+          <meta name="twitter:description" content="I create award winning web experiences primarily focusing on front end development, UX, accessibility, and design." />
         </Head>
         <body>
           <Main />

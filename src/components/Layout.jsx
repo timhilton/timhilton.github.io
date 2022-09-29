@@ -86,10 +86,9 @@ const H1 = styled.h1`
     font-size: 2em;
 
     @media (max-width: 734px) {
-        top: 9px;
+        top: 12px;
         left: 24px;
 
-        font-size: 2em;
     }
 `
 
