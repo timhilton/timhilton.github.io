@@ -5,7 +5,7 @@ import Moon from './Moon';
 
 const ToggleWrap = styled.div`
     position: fixed;
-    top: 24px;
+    top: 26px;
     right: 48px;
     z-index: 5;
     display: grid;

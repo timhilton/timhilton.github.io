@@ -51,11 +51,11 @@ function use100vh() {
 }
 
 const Container = styled.div`
-  display: flex;
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-  background: linear-gradient(0deg, ${(props) => props.theme.colors.stop1} 33.892%, ${(props) => props.theme.colors.start1} )
+    display: flex;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(0deg, ${(props) => props.theme.colors.stop1} 33.892%, ${(props) => props.theme.colors.start1} );
 `
 
 const Main = styled.main`
@@ -72,6 +72,24 @@ const Main = styled.main`
     @media (max-width: 734px) {
         width: 87.5%;
         max-width: 414px;
+    }
+`
+
+const H1 = styled.h1`
+    position: absolute;
+    top: 24px;
+    left: 48px;
+    color: rgb(${(props) => props.theme.text});
+    margin: 0;
+    padding: 0;
+    line-height: 1em;
+    font-size: 2em;
+
+    @media (max-width: 734px) {
+        top: 9px;
+        left: 24px;
+
+        font-size: 2em;
     }
 `
 
@@ -147,6 +165,7 @@ export default function Layout({ children }) {
         <ThemeProvider theme={selectedTheme === 'light' ? theme.light : theme.dark}>
             <Container  ref={ref}>
                 <Sky selectedTheme={selectedTheme}/>
+                <H1>Tim Hilton</H1>
                 <Main id="main">{children}</Main>
                 <Toggle themePicker={setSelectedTheme}/>
                 <Bg />

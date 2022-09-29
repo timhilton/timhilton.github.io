@@ -15,6 +15,11 @@ const Section = styled.section`
     animation: ${fadeIn} 1000ms forwards ease-in-out;
     animation-delay: 3000ms;
     color: rgb(${(props) => props.theme.text});
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 `
 
 const Headings = styled.div`
@@ -91,15 +96,11 @@ const Copy = styled.p`
 const Home = () => {
     return (
         <Section>
-            <h1>Tim Hilton</h1>
             <Headings>
-                    <Amp/>
-                    <h3>Web Development</h3>
-                    <h3>Creative Services</h3>
+                <Amp/>
+                <h3>Web Development</h3>
+                <h3>Creative Services</h3>
             </Headings>
-            {/* <Copy>
-            I create award winning web experiences primarily focusing on front end development, UX, accessibility, and design.
-            </Copy> */}
         </Section>
     )
 }
