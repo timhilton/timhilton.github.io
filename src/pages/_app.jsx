@@ -1,94 +1,105 @@
+/* eslint-disable react/no-unknown-property */
 import { useRouter } from 'next/router';
+import localFont from 'next/font/local';
 import Script from 'next/script';
 import { useEffect } from 'react';
 import { createGlobalStyle } from 'styled-components';
-import Layout from '../components/Layout'
-import * as ga from '../utils/gtm';
+import Layout from '../components/Layout';
+import setupWebVitalsTracking from '../utils/reportWebVitals';
+import { pageview } from '../utils/gtm';
+
+const galano = localFont({
+  src: [
+    {
+      path: '../fonts/GalanoGrotesque-Extra-Light.otf',
+      style: 'normal',
+      display: 'swap'
+    },
+    {
+      path: '../fonts/GalanoGrotesque-Italic.otf',
+      style: 'italic',
+      display: 'swap'
+    },
+  ],
+  families: ['Galano']
+});
+
+const sfProText = localFont({
+  src: [
+    {
+      path: '../fonts/SF-Pro-Text-LightItalic.otf',
+      display: 'swap'
+    },
+  ],
+  families: ['SF Pro Text']
+});
 
 const GlobalStyle = createGlobalStyle`
-@font-face {
-  font-family: 'Galano';
-  src: local("GalanoGrotesque-Extra-Light"), local("GalanoGrotesque-Extra-Light"), url("/fonts/GalanoGrotesque-Extra-Light.otf") format("opentype");
-  font-weight: 100;
-  font-style: normal; 
-}
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-base);
+    overflow-x: hidden;
+  }
 
-@font-face {
-  font-family: 'Galano';
-  src: local("GalanoGrotesque Italic"), local("GalanoGrotesque-Italic"), url("/fonts/GalanoGrotesque-Italic.otf") format("opentype");
-  font-weight: normal;
-  font-style: italic; 
-}
+  h1 {
+    font-size: 3.5em;
+  }
 
-@font-face {
-  font-family: 'SF Pro Text';
-  src: local("SF-Pro-Text-LightItalic"), local("SF-Pro-Text-LightItalic"), url("/fonts/SF-Pro-Text-LightItalic.otf") format("opentype");
-  font-weight: 300;
-  font-style: italic; 
-}
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: 'Galano';
-  overflow-x: hidden;
-}
-
-h1 {
-  font-size: 3.5em;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-`
-
+  * {
+    box-sizing: border-box;
+  }
+`;
 
 function MyApp({ Component, pageProps }) {
-  const router = useRouter()
+  const router = useRouter();
 
   useEffect(() => {
+    setupWebVitalsTracking();
+
     const handleRouteChange = (url) => {
-      ga.pageview(url)
-    }
-    router.events.on('routeChangeComplete', handleRouteChange)
+      pageview(url);
+    };
+
+    router.events.on('routeChangeComplete', handleRouteChange); 
+    
+    // initial page load
+    pageview(router.asPath);
+
     return () => {
-      router.events.off('routeChangeComplete', handleRouteChange)
-    }
-  }, [router.events])
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router.asPath, router.events]);
 
   return (
     <>
       {/* Global Site Tag (gtag.js) - Google Analytics */}
-      <Script
-      strategy="afterInteractive"
-      src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-      />
-      <Script 
-      id="google-analytics-script"
-      strategy="afterInteractive"      
-      >
-      {`
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        
-        gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
+      <Script strategy="afterInteractive" src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
+      <Script id="google-analytics-script" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
         `}
       </Script>
-      <GlobalStyle/>
-      
+      <style jsx global>{`
+        :root {
+          --font-base: ${galano.style.fontFamily};
+        }
+      `}</style>
+      <GlobalStyle />
       <Layout>
         <Component {...pageProps} />
       </Layout>
     </>
-  )
+  );
 }
 
 export default MyApp;
