@@ -1,8 +1,8 @@
 import styled, { keyframes } from "styled-components";
+import Image from "next/image";
 import GitHub from "../svgs/github.svg";
 import Mail from "../svgs/mail.svg";
 import LinkedIn from "../svgs/linkedin.svg";
-import Instagram from "../svgs/instagram.svg";
 import Spotify from "../svgs/spotify.svg";
 import ListItem from "./DockItems";
 import Resume from '../svgs/resume.svg';
@@ -93,7 +93,12 @@ const Dock = () => {
                         rel="noopener noreferrer"
                         href="https://www.instagram.com/tim.hilton/"
                     >
-                        <Instagram />
+                        <Image 
+                            src='/instagram.png' 
+                            width={60}
+                            height={60}
+                            alt="Instagram" 
+                        />
                     </a>
                 </ListItem>
                 <ListItem>

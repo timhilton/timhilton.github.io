@@ -1,4 +1,4 @@
-import styled, { withTheme } from "styled-components";
+import styled, { useTheme } from "styled-components";
 import { useState } from "react";
 import Sun from './Sun';
 import Moon from './Moon';
@@ -50,7 +50,7 @@ const Label = styled.label`
     border-radius: 100px;
     position: absolute;
     top: 0;
-    border: 1px solid rgb(${(props) => props.theme.text});
+    border: 1px solid rgb(${({ theme }) => theme.text});
     transition: border 300ms;
 
     &:after {
@@ -60,33 +60,33 @@ const Label = styled.label`
         left: 1.25px;
         width: 20.25px;
         height: 20.25px;
-        background: rgb(${(props) => props.theme.text});
+        background: rgb(${({ theme }) => theme.text});
         border-radius: 90px;
         transition: 0.3s;
     }
 `
 
-const Check = styled.div `
+const Check = styled.div`
     height: 25px;
     position: relative;
 `
 
-const Toggle = (props) => {
+const Toggle = ({ themePicker }) => {
     const [isChecked, setIsChecked] = useState(true);
-    const { themePicker } = props;
+    const theme = useTheme();
 
     const handleChange = () => {
         setIsChecked(!isChecked);
 
-        let theme = isChecked === true ? 'light' : 'dark';
-        themePicker(theme);
+        const selectedTheme = isChecked ? 'light' : 'dark';
+        themePicker(selectedTheme);
     }
 
     return (
         <ToggleWrap>
-            <Sun/>
+            <Sun />
             <Check>
-                <Checkbox type="checkbox" checked={isChecked} id="switch" onChange={handleChange}/>
+                <Checkbox type="checkbox" checked={isChecked} id="switch" onChange={handleChange} />
                 <Label htmlFor="switch">Toggle Light and Dark Modes</Label>
             </Check>
             <Moon />
@@ -94,4 +94,4 @@ const Toggle = (props) => {
     )
 }
 
-export default withTheme(Toggle);
+export default Toggle;

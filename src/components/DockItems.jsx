@@ -5,12 +5,21 @@ const ListItem = styled.li`
         width: 60px;
         transition: width 150ms ease-in-out;
     }
+
+    img {
+        transition: transform 150ms ease-in-out;
+    }
     padding: 0 12.5px;
     position: relative;
 
     @media (max-width: 734px) {
         svg {
             width: 50px;
+        }
+
+        img {
+            width: 50px;
+            height: 50px;
         }
 
         padding: 10px 10px 0px 10px;
@@ -38,9 +47,18 @@ const ListItem = styled.li`
             width: calc(60px * 1.1);
         }
 
+        img {
+            transform: scale(1.1);
+            transform-origin: bottom;
+        }
+
         @media (max-width: 734px) {
             svg {
                 width: 50px;
+            }
+
+            img {
+                transform: scale(1);
             }
         }
 

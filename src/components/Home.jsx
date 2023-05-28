@@ -8,19 +8,22 @@ const fadeIn = keyframes`
     to {
         opacity: 1;
     }
-`
+`;
+
+// Calculate the color value outside the styled component
+const textColor = (props) => props.theme.text;
 
 const Section = styled.section`
     opacity: 0;
     animation: ${fadeIn} 1000ms forwards ease-in-out;
     animation-delay: 3000ms;
-    color: rgb(${(props) => props.theme.text});
+    color: rgb(${textColor});
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 100%;
-`
+`;
 
 const Headings = styled.div`
     font-weight: normal;
@@ -32,7 +35,7 @@ const Headings = styled.div`
     ;
     width: max-content;
     margin-bottom: 36px;
-    color: rgb(${(props) => props.theme.text});
+    color: rgb(${textColor});
 
     h3 {
         height: max-content;
@@ -61,21 +64,21 @@ const Headings = styled.div`
             align-self: end;
         }
     }
-`
+`;
 
 const Amp = styled(Ampersand)`
     width: 125px;
     height: 140px;
     grid-area: amp;
     path {
-        fill: rgba(${(props) => props.theme.background}, 0.4);
+        fill: rgba(${textColor}, 0.4);
     }
 
     @media (max-width: 734px) {
         width: 78px;
         height: 87px;
     }
-`
+`;
 
 const Copy = styled.p`
     font-style: normal;
@@ -83,7 +86,7 @@ const Copy = styled.p`
     width: 505px;
     font-size: 24px;
     line-height: 40px;
-    color: rgb(${(props) => props.theme.text});
+    color: rgb(${textColor});
 
     @media (max-width: 734px) {
         font-size: 18px;
@@ -91,7 +94,7 @@ const Copy = styled.p`
         width: 100%;
         align-self: flex-end;
     }
-`
+`;
 
 const Home = () => {
     return (
@@ -102,7 +105,7 @@ const Home = () => {
                 <h3>Creative Services</h3>
             </Headings>
         </Section>
-    )
-}
+    );
+};
 
 export default Home;

@@ -1,4 +1,4 @@
-import styled, { css, keyframes, ThemeProvider } from 'styled-components';
+import styled, { keyframes, ThemeProvider } from 'styled-components';
 import Dock from "./Dock";
 import Desktop from './Desktop';
 import Toggle from './Toggle';
@@ -15,7 +15,7 @@ const mountainFadeIn = keyframes`
         opacity: 1;
         transform: translateY(0);
     }
-`
+`;
 
 const createFade= () => {
     let styles = '';
@@ -26,27 +26,24 @@ const createFade= () => {
             &:nth-of-type(${i}) {
                 animation-delay: ${j}ms;
             }
-        `
+        `;
         j = j - 750;
     }
 
     return styles;
-}
-
+};
 
 function use100vh() {
     const ref = useRef();
     const { height } = useWindowSize();
 
-    useEffect(
-        () => {
+    useEffect(() => {
         if (!ref.current) {
             return;
         }
         ref.current.style.height = height + 'px';
-        },
-        [height],
-    );
+    }, [height]);
+
     return ref;
 }
 
@@ -56,7 +53,7 @@ const Container = styled.div`
     height: 100vh;
     overflow: hidden;
     background: linear-gradient(0deg, ${(props) => props.theme.colors.stop1} 33.892%, ${(props) => props.theme.colors.start1} );
-`
+`;
 
 const Main = styled.main`
     width: 980px;
@@ -73,7 +70,7 @@ const Main = styled.main`
         width: 87.5%;
         max-width: 414px;
     }
-`
+`;
 
 const H1 = styled.h1`
     position: absolute;
@@ -88,9 +85,9 @@ const H1 = styled.h1`
     @media (max-width: 734px) {
         top: 12px;
         left: 24px;
-
     }
-`
+`;
+
 
 const Bg = styled(Desktop)`
     position: absolute;
@@ -107,7 +104,7 @@ const Bg = styled(Desktop)`
         animation: ${mountainFadeIn} 1000ms forwards ease-in-out;
         ${createFade()}
     }
-`
+`;
 
 const lightMode = {
     background: '25, 25, 25',
@@ -127,7 +124,7 @@ const lightMode = {
         start5: "#AF9883",
         stop5: "#718034"
     }
-}
+};
 
 const darkMode = {
     background: '151, 151, 151',
@@ -147,30 +144,29 @@ const darkMode = {
         start5: "#0A1220",
         stop5: "#002760"
     }
-}
+};
 
 export default function Layout({ children }) {
     const theme = {
         light: lightMode,
         dark: darkMode
-    }
+    };
 
     const ref = use100vh();
-
     const [selectedTheme, setSelectedTheme] = useState('dark');
 
     return (
         <>
-        <ThemeProvider theme={selectedTheme === 'light' ? theme.light : theme.dark}>
-            <Container  ref={ref}>
-                <Sky selectedTheme={selectedTheme}/>
-                <H1>Tim Hilton</H1>
-                <Main id="main">{children}</Main>
-                <Toggle themePicker={setSelectedTheme}/>
-                <Bg />
-                <Dock />
-            </Container>
-        </ThemeProvider>
+            <ThemeProvider theme={theme[selectedTheme]}>
+                <Container ref={ref}>
+                    <Sky selectedTheme={selectedTheme}/>
+                    <H1>Tim Hilton</H1>
+                    <Main id="main">{children}</Main>
+                    <Toggle themePicker={setSelectedTheme}/>
+                    <Bg />
+                    <Dock />
+                </Container>
+            </ThemeProvider>
         </>
-    )
+    );
 }
