@@ -1,4 +1,4 @@
-import { getCLS, getFID, getLCP } from "web-vitals";
+import { onCLS, onFID, onLCP } from "web-vitals";
 
 function sendWebVitalsToGA({ name, value }) {
   // Send the metric to Google Analytics
@@ -11,9 +11,9 @@ function sendWebVitalsToGA({ name, value }) {
 }
 
 function setupWebVitalsTracking() {
-  getCLS(sendWebVitalsToGA);
-  getFID(sendWebVitalsToGA);
-  getLCP(sendWebVitalsToGA);
+  onCLS(sendWebVitalsToGA);
+  onFID(sendWebVitalsToGA);
+  onLCP(sendWebVitalsToGA);
 }
 
 export default setupWebVitalsTracking;
