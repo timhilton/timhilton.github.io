@@ -95,6 +95,11 @@ const SubmitButton = styled.button`
     }
 `
 
+const SuccessMessage = styled.p`
+    font-size: 1.5em;
+    color: rgb(${(props) => props.theme.text});
+`
+
 export default function Contact() {
     const [formData, setFormData] = useState({
       name: '',
@@ -118,6 +123,7 @@ export default function Contact() {
   
     return (
         <ContactContainer>
+            {!submitted && 
             <Form onSubmit={handleSubmit} name="contact" method="POST" data-netlify="true">
             <input type="hidden" name="form-name" value="contact" />
             <InputContainer> 
@@ -168,7 +174,8 @@ export default function Contact() {
 
             <SubmitButton type="submit">Let&#39;s Talk</SubmitButton>
             </Form>
-            {submitted && <p>Thank you for your message! I look forward to speaking with you!</p>}
+}
+            {submitted && <SuccessMessage>Thank you for your message! I look forward to speaking with you!</SuccessMessage>}
         </ContactContainer>
     );
 }
