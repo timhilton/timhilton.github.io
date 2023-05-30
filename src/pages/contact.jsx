@@ -124,7 +124,7 @@ export default function Contact() {
     return (
         <ContactContainer>
             {!submitted && 
-            <Form onSubmit={handleSubmit} name="contact" method="POST" data-netlify="true" encType="application/x-www-form-urlencoded">
+            <Form name="contact" method="POST" data-netlify="true" encType="application/x-www-form-urlencoded">
             <input type="hidden" name="form-name" value="contact" />
             <InputContainer> 
                 <Input
@@ -172,7 +172,7 @@ export default function Contact() {
                 <Label htmlFor="message">Message</Label>
             </InputContainer>
 
-            <SubmitButton type="submit">Let&#39;s Talk</SubmitButton>
+            <SubmitButton type="submit" onClick={handleSubmit}>Let&#39;s Talk</SubmitButton>
             </Form>
 }
             {submitted && <SuccessMessage>Thank you for your message! I look forward to speaking with you!</SuccessMessage>}
