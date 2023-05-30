@@ -124,7 +124,7 @@ export default function Contact() {
     return (
         <ContactContainer>
             {!submitted && 
-            <Form onSubmit={handleSubmit} name="contact" method="POST" data-netlify="true">
+            <Form onSubmit={handleSubmit} name="contact" method="POST" data-netlify="true" encType="application/x-www-form-urlencoded">
             <input type="hidden" name="form-name" value="contact" />
             <InputContainer> 
                 <Input
