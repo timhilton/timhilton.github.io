@@ -20,8 +20,8 @@ const ContactContainer = styled.section`
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 
     @media (max-width: 734px) {
-        margin-top: -4em;
-        padding-top: 5em;
+        margin-top: -6em;
+        padding: 5em 0;
         width: 100%;
         height: 70%;
     }
@@ -36,6 +36,12 @@ const Form = styled.form`
 const InputContainer = styled.div`
     position: relative;
     margin-bottom: 2.5em;
+
+    @media (max-width: 734px) {
+        &:last-of-type {
+            margin-bottom: 1em;
+        }
+    }
 `
 const Input = styled.input`
     width: 100%;
