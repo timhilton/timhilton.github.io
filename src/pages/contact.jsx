@@ -48,6 +48,7 @@ const Input = styled.input`
 const TextArea = styled.textarea`
     width: 100%;
     padding: 0.5em;
+    font-family: inherit;
     font-size: 1em;
     height: 10em;
     border: none;
@@ -89,6 +90,8 @@ const SubmitButton = styled.button`
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
     background-color: rgb(59, 232, 142);
     transition: 0.3s ease all;
+    color: rgb(246, 246, 246);
+    text-shadow: 0 0 7px rgba(25, 25, 25, 0.4);
 
     &:hover {
         background-color: rgb(59, 232, 142, 0.7);
@@ -101,9 +104,9 @@ const SuccessMessage = styled.p`
 `
 
 const encode = (data) => {
-return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
 }
 
 export default function Contact() {
