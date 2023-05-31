@@ -117,16 +117,15 @@ export default function Contact() {
     };
   
     const handleSubmit = (e) => {
-        e.preventDefault();
-
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: { "form-name": "contact", ...formData }
+            body: encode({ "form-name": "contact", ...data })
           })
             .then(() => console.log("Success!"))
             .catch(error => console.log(error));
-
+        
+        e.preventDefault();
         setSubmitted(true);
     };
   
