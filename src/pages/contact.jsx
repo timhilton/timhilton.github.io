@@ -20,6 +20,8 @@ const ContactContainer = styled.section`
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 
     @media (max-width: 734px) {
+        margin-top: -4em;
+        padding-top: 5em;
         width: 100%;
         height: 70%;
     }
