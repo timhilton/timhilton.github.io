@@ -133,8 +133,14 @@ export default function Contact() {
     return (
         <ContactContainer>
             {!submitted && 
-            <Form name="contact" action='/contact' method="POST" data-netlify="true" onSubmit={handleSubmit}>
+            <Form 
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                onSubmit={handleSubmit}>
             <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="bot-field" />
             <InputContainer> 
                 <Input
                     type="text"
