@@ -117,13 +117,22 @@ export default function Contact() {
     };
   
     const handleSubmit = (e) => {
-      setSubmitted(true);
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({ "form-name": "contact", ...data })
+          })
+            .then(() => console.log("Success!"))
+            .catch(error => console.log(error));
+
+        e.preventDefault();
+        setSubmitted(true);
     };
   
     return (
         <ContactContainer>
             {!submitted && 
-            <Form name="contact" method="POST" data-netlify="true" encType="application/x-www-form-urlencoded">
+            <Form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
             <input type="hidden" name="form-name" value="contact" />
             <InputContainer> 
                 <Input
@@ -171,7 +180,7 @@ export default function Contact() {
                 <Label htmlFor="message">Message</Label>
             </InputContainer>
 
-            <SubmitButton type="submit" onClick={handleSubmit}>Let&#39;s Talk</SubmitButton>
+            <SubmitButton type="submit">Let&#39;s Talk</SubmitButton>
             </Form>
 }
             {submitted && <SuccessMessage>Thank you for your message! I look forward to speaking with you!</SuccessMessage>}
