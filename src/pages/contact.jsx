@@ -100,6 +100,12 @@ const SuccessMessage = styled.p`
     color: rgb(${(props) => props.theme.text});
 `
 
+const encode = (data) => {
+return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
+
 export default function Contact() {
     const [formData, setFormData] = useState({
       name: '',
@@ -117,6 +123,7 @@ export default function Contact() {
     };
   
     const handleSubmit = (e) => {
+        e.preventDefault();
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -125,7 +132,6 @@ export default function Contact() {
             .then(() => console.log("Success!"))
             .catch(error => console.log(error));
         
-        e.preventDefault();
         setSubmitted(true);
     };
   
