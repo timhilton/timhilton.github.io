@@ -117,6 +117,8 @@ export default function Contact() {
     };
   
     const handleSubmit = (e) => {
+        e.preventDefault();
+
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -125,7 +127,6 @@ export default function Contact() {
             .then(() => console.log("Success!"))
             .catch(error => console.log(error));
 
-        e.preventDefault();
         setSubmitted(true);
     };
   
