@@ -21,7 +21,8 @@ const ContactContainer = styled.section`
 
     @media (max-width: 734px) {
         margin-top: -6em;
-        padding: 5em 0;
+        padding-top: 6em;
+        padding-bottom: 5em;
         width: 100%;
         height: 70%;
     }
@@ -89,6 +90,7 @@ const Label = styled.label`
 
 const SubmitButton = styled.button`
     font-size: 1.5em;
+    font-weight: inherit;
     width: max-content;
     border: none;
     border-radius: 50px;
