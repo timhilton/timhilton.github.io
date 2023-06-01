@@ -167,8 +167,8 @@ export default function Layout({ children }) {
                     <Link href='/'>
                         <H1>Tim Hilton</H1>
                     </Link>
-                    <Main id="main">{children}</Main>
                     <Toggle themePicker={setSelectedTheme}/>
+                    <Main id="main">{children}</Main>
                     <Bg />
                     <Dock />
                 </Container>
