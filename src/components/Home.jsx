@@ -1,22 +1,13 @@
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import styled, { keyframes } from "styled-components";
 import Ampersand from "../svgs/ampersand.svg";
-
-const fadeIn = keyframes`
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-`;
 
 // Calculate the color value outside the styled component
 const textColor = (props) => props.theme.text;
 
 const Section = styled.section`
-    opacity: 0;
-    animation: ${fadeIn} 1000ms forwards ease-in-out;
-    animation-delay: 3000ms;
+    opacity: 1;
     color: rgb(${textColor});
     display: flex;
     align-items: center;

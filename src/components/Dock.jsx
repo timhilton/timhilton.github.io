@@ -6,6 +6,7 @@ import LinkedIn from "../svgs/linkedin.svg";
 import Spotify from "../svgs/spotify.svg";
 import ListItem from "./DockItems";
 import Resume from '../svgs/resume.svg';
+import Link from "next/link";
 
 const dockSlideIn = keyframes`
     0% {
@@ -19,7 +20,7 @@ const dockSlideIn = keyframes`
 const DockContainer = styled.nav`
     bottom: -175px;
     z-index: 5;
-    position: fixed;
+    position: absolute;
     overflow: visibile;
     width: 100%;
     animation: ${dockSlideIn} 1500ms forwards ease-in-out;
@@ -74,9 +75,12 @@ const Dock = () => {
                     </a>
                 </ListItem>
                 <ListItem>
-                    <a href='mailto:tim@timhilton.net'>
+                    {/* <a href='mailto:tim@timhilton.net'>
                         <Mail />
-                    </a>
+                    </a> */}
+                    <Link href='/contact'>
+                        <Mail />
+                    </Link>
                 </ListItem>
                 <ListItem>
                     <a

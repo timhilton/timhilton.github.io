@@ -5,6 +5,7 @@ import Toggle from './Toggle';
 import { useEffect, useRef, useState } from 'react';
 import { useWindowSize } from 'react-use';
 import Sky from './Sky';
+import Link from 'next/link';
 
 const mountainFadeIn = keyframes`
     0% {
@@ -51,6 +52,7 @@ const Container = styled.div`
     display: flex;
     position: relative;
     height: 100vh;
+    min-height: 800px;
     overflow: hidden;
     background: linear-gradient(0deg, ${(props) => props.theme.colors.stop1} 33.892%, ${(props) => props.theme.colors.start1} );
 `;
@@ -59,6 +61,8 @@ const Main = styled.main`
     width: 980px;
     margin: 0 auto;
     position: relative;
+    display: flex;
+    justify-content: center;
     z-index: 2;
     pointer-events: none;
 
@@ -160,9 +164,11 @@ export default function Layout({ children }) {
             <ThemeProvider theme={theme[selectedTheme]}>
                 <Container ref={ref}>
                     <Sky selectedTheme={selectedTheme}/>
-                    <H1>Tim Hilton</H1>
-                    <Main id="main">{children}</Main>
+                    <Link href='/'>
+                        <H1>Tim Hilton</H1>
+                    </Link>
                     <Toggle themePicker={setSelectedTheme}/>
+                    <Main id="main">{children}</Main>
                     <Bg />
                     <Dock />
                 </Container>

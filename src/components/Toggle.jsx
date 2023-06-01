@@ -4,7 +4,7 @@ import Sun from './Sun';
 import Moon from './Moon';
 
 const ToggleWrap = styled.div`
-    position: fixed;
+    position: absolute;
     top: 26px;
     right: 48px;
     z-index: 5;
