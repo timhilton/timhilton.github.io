@@ -4,7 +4,6 @@ import Desktop from './Desktop';
 import Toggle from './Toggle';
 import { useEffect, useRef, useState } from 'react';
 import { useWindowSize } from 'react-use';
-import Sky from './Sky';
 import Link from 'next/link';
 
 const mountainFadeIn = keyframes`
@@ -163,8 +162,7 @@ export default function Layout({ children }) {
         <>
             <ThemeProvider theme={theme[selectedTheme]}>
                 <Container ref={ref}>
-                    <Sky selectedTheme={selectedTheme}/>
-                    <Link href='/'>
+                    <Link href='/' prefetch={false}>
                         <H1>Tim Hilton</H1>
                     </Link>
                     <Toggle themePicker={setSelectedTheme}/>

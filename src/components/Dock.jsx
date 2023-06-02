@@ -78,7 +78,7 @@ const Dock = () => {
                     {/* <a href='mailto:tim@timhilton.net'>
                         <Mail />
                     </a> */}
-                    <Link href='/contact'>
+                    <Link href='/contact' prefetch={false}>
                         <Mail />
                     </Link>
                 </ListItem>
