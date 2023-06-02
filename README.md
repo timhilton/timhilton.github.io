@@ -7,4 +7,6 @@ This site was originally just a plain HTML/CSS/JS site which I then converted to
 - React.js
 - SVGR
 - Styled-Components
-- react-three
+
+## Tooling
+This site is being hosted on Netlify and is utilizing some of their tooling like Form handling.
