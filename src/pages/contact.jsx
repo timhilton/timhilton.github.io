@@ -30,12 +30,6 @@ const Form = styled.form`
     grid-template-rows: auto;
     justify-items: center;
     width: 100%;
-
-    @media (max-width: 734px) {
-        &:last-child {
-            gap: 1em;
-        }
-    }
 `;
 
 const inputStyles = {
