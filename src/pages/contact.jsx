@@ -17,7 +17,7 @@ const ContactContainer = styled.section`
 
     @media (max-width: 734px) {
         height: 70%;
-        margin-top: -6em;
+        margin-top: -7em;
         padding-bottom: 5em;
         padding-top: 6em;
         width: 100%;
@@ -118,6 +118,10 @@ const SubmitButton = styled.button`
 
     &:hover {
         background-color: rgb(59, 232, 142, 0.7);
+    }
+
+    @media (max-width: 734px) {
+        margin-top: -1em;
     }
 }`;
 
