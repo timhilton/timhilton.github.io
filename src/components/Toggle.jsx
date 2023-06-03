@@ -26,6 +26,18 @@ const ToggleWrap = styled.div`
     @media (max-width: 734px) {
         top: 12px;
         right: 24px;
+        grid-template-columns: 20px 35px 16px;
+        grid-gap: 8px;
+
+        svg {
+            &:first-of-type {
+                height: 20px;
+            }
+    
+            &:last-of-type {
+                height: 13px;
+            }
+        }
     }
 `
 
@@ -64,11 +76,25 @@ const Label = styled.label`
         border-radius: 90px;
         transition: 0.3s;
     }
+
+    @media (max-width: 734px) {
+        width: 35px;
+        height: 20px;
+
+        &:after {
+            width: 15px;
+            height: 15px;
+        }
+    }
 `
 
 const Check = styled.div`
     height: 25px;
     position: relative;
+
+    @media (max-width: 734px) {
+        height: 20px;
+    }
 `
 
 const Toggle = ({ themePicker }) => {
