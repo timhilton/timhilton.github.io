@@ -35,7 +35,7 @@ const Headings = styled.div`
         margin: 0;
 
         @media (max-width: 734px) {
-            font-size: 24px;
+            font-size: 1.25em;
             line-height: 1.8;
         }
 
@@ -47,6 +47,7 @@ const Headings = styled.div`
 
             @media (max-width: 734px) {
                 right: 35px;
+                top: 9px;
             }
         }
 

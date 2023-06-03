@@ -88,6 +88,7 @@ const H1 = styled.h1`
     @media (max-width: 734px) {
         top: 12px;
         left: 24px;
+        font-size: 1.5em;
     }
 `;
 
