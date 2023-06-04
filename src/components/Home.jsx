@@ -7,55 +7,51 @@ import Ampersand from "../svgs/ampersand.svg";
 const textColor = (props) => props.theme.text;
 
 const Section = styled.section`
-    opacity: 1;
+    align-items: center;
     color: rgb(${textColor});
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
     height: 100%;
+    justify-content: center;
+    opacity: 1;
+    width: 100%;
 `;
 
 const Headings = styled.div`
-    font-weight: normal;
     font-style: italic;
+    font-weight: normal;
+    color: rgb(${textColor});
     display: grid;
     grid-template-areas: 
         "amp top-heading"
-        "amp bottom-heading"
-    ;
-    width: max-content;
+        "amp bottom-heading";
     margin-bottom: 36px;
-    color: rgb(${textColor});
+    width: max-content;
 
     h3 {
+        align-self: end;
+        font-size: 2.25em; /* 36px / 16px = 2.25em */
+        grid-area: bottom-heading;
         height: max-content;
-        position: relative;
-        font-size: 36px;
         margin: 0;
-
+        position: relative;
+    
         @media (max-width: 734px) {
             font-size: 1.25em;
             line-height: 1.8;
         }
-
+    
         &:first-of-type {
-            grid-area: top-heading;
             align-self: end;
+            grid-area: top-heading;
             right: 50px;
             top: 15px;
-
+    
             @media (max-width: 734px) {
                 right: 35px;
                 top: 9px;
             }
         }
-
-        &:last-of-type {
-            grid-area: bottom-heading;
-            align-self: end;
-        }
-    }
+    }    
 `;
 
 const Amp = styled(Ampersand)`
@@ -76,13 +72,13 @@ const Copy = styled.p`
     font-style: normal;
     font-weight: 100;
     width: 505px;
-    font-size: 24px;
-    line-height: 40px;
+    font-size: 1.5em; /* 24px / 16px = 1.5em */
+    line-height: 2.5em; /* 40px / 16px = 2.5em */
     color: rgb(${textColor});
 
     @media (max-width: 734px) {
-        font-size: 18px;
-        line-height: 36px;
+        font-size: 1.125em; /* 18px / 16px = 1.125em */
+        line-height: 2.25em; /* 36px / 16px = 2.25em */
         width: 100%;
         align-self: flex-end;
     }
