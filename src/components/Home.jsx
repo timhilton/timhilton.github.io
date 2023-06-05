@@ -95,7 +95,7 @@ const Home = () => {
                 <h3>Creative Services</h3>
             </Headings>
             <Copy>
-            I'm an experienced Web Engineer focused on Front End Development working predominately with JavaScript, React, Node, and Sass.  I have a demonstrated history of working and creating award winning web experiences in the marketing/advertising, and entertainment industries.
+            I&#39;m an experienced Web Engineer focused on Front End Development working predominately with JavaScript, React, Node, and Sass.  I have a demonstrated history of working and creating award winning web experiences in the marketing/advertising, and entertainment industries.
             </Copy>
         </Section>
     );
