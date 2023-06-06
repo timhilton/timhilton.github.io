@@ -4,10 +4,6 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
-  experimental: {
-    browsersListForSwc: true,
-    legacyBrowsers: false
-  },
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
