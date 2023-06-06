@@ -22,7 +22,7 @@ export default class ContentfulApi {
         }
     }
 
-    // get the About Content - you can then call this in the getStaticProps function on the about page...
+    // get the Home Content - you can then call this in the getStaticProps function on the about page...
     static async getHomeContent() {
         const query = `
         {
