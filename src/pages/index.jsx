@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Home from '../components/Home';
-import ContentfulApi from "../utils/ContentfulApi";
+import ContentfulApi from "../utils/ContentfulApi.js";
 
 export async function getStaticProps() {
   const homeContent = await ContentfulApi.getHomeContent();
