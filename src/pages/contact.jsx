@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import { useState } from 'react';
+import Head from 'next/head';
 
 const ContactContainer = styled.section`
     align-items: center;
@@ -176,14 +177,20 @@ export default function Contact() {
     };
   
     return (
+        <>
+        <Head>
+        <title>Tim Hilton - Contact</title>
+        <meta name="description" content="Tim Hilton - Contact" />
+        <link rel="icon" href="/favicon.ico" />
+        </Head>
         <ContactContainer>
             {!submitted && 
             <Form 
-                name="contact"
-                method="POST"
-                data-netlify="true"
-                data-netlify-honeypot="bot-field"
-                onSubmit={handleSubmit}>
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            onSubmit={handleSubmit}>
             <input type="hidden" name="form-name" value="contact" />
             <input type="hidden" name="bot-field" />
             <InputContainer> 
@@ -194,7 +201,7 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                />
+                    />
                 <Label htmlFor="name">Name</Label>
             </InputContainer>
 
@@ -206,7 +213,7 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                />
+                    />
                 <Label htmlFor="email">Email</Label>
             </InputContainer>
             <InputContainer>
@@ -217,7 +224,7 @@ export default function Contact() {
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                />
+                    />
                 <Label htmlFor="subject">Subject</Label>
             </InputContainer>
 
@@ -228,7 +235,7 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     required
-                ></TextArea>
+                    ></TextArea>
                 <Label htmlFor="message">Message</Label>
             </InputContainer>
 
@@ -237,5 +244,6 @@ export default function Contact() {
 }
             {submitted && <SuccessMessage>Thank you for your message! I look forward to speaking with you!</SuccessMessage>}
         </ContactContainer>
+        </>
     );
 }
