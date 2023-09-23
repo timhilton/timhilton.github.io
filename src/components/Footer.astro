@@ -1,0 +1,52 @@
+---
+import Icon from './Icon.astro';
+
+const icons = [
+    'github',
+    'linkedin',
+    'resume',
+    'spotify'
+]
+---
+<style>
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 4rem;
+      position: absolute;
+      bottom: 0;
+      width: calc(100% - 2rem);
+      color: #f5f5f5;
+      left: 50%;
+    }
+
+    .social {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    a {
+        width: 36px;
+        height: 36px;
+    }
+
+    .footer-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        transform: translateX(-50%);
+    }
+</style>
+
+<footer>
+    <div class="footer-content">
+    <p>&#169; {new Date().getFullYear()} Tim Hilton</p>
+    <div class="social">
+    {icons.map((icon) => <a href="#"><Icon icon={icon}/></a>)}
+    </div>
+    </div>
+</footer>

@@ -1,0 +1,60 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import { Image } from 'astro:assets';
+import me from "../images/tim.jpg";
+import { contentfulClient } from "../lib/contentful";
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import type { AboutContent } from "../lib/contentful";
+
+const title="ABOUT";
+const links = ['Work', 'Contact'];
+
+const entries = await contentfulClient.getEntries<AboutContent>({
+    content_type: "home",
+});
+
+const { about } = entries.items[0].fields;
+const elevatorPitchHtml = documentToHtmlString(about);
+---
+<Layout>
+    <Navigation title={title} links={links}/>
+    <div class="about-container">
+        <article class="about-text" set:html={elevatorPitchHtml} transition:animate="slide"/>
+        <div transition:name="portrait" class="img-wrap">
+            <Image src={me} alt="Tim Hilton" class="portrait"/>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    .about-container {
+        display: flex;
+    }
+
+    .about-text {
+        font-size: 1.5rem;
+        line-height: 1.5;
+        margin: 0 24px;
+        color: #f5f5f5;
+        font-weight: 100;
+        letter-spacing: 0.1rem;
+        width: 50%;
+    }
+
+    .portrait {
+		width: 100%;
+		height: auto;
+	}
+
+	.img-wrap {
+		width: 30%;
+		height: 30%;
+		margin-top: -72px;
+		margin-inline-start: 72px;
+		border-radius: 50%;
+		overflow: hidden;
+		z-index: 1;
+		border: 2px solid #f5f5f5;
+	}
+</style>

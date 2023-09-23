@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Form from '../components/Form.jsx';
+
+const title="CONTACT";
+const links = ['About', 'Work'];
+---
+<Layout>
+    <Navigation title={title} links={links}/>
+    <section transition:animate="slide">
+        <Form client:load/>
+    </section>
+</Layout>
